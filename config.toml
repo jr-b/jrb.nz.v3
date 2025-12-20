@@ -1,0 +1,31 @@
+# The URL the site will be built for
+base_url = "https://jrb.nz"
+title = "jrb"
+theme = "duckquill"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+styles = ["custom.css"]
+
+[extra.nav]
+links = [
+    { url = "@/blog/_index.md", name = "/blog" },
+    { url = "@/uses.md", name = "/use" },
+    { url = "https://letterbird.co/jrb", name = "/email" },
+
+    # { url = "https://mastodon.ml/@bano", name = "Mastodon" },
+    # { url = "https://codeberg.org/bano", name = "Codeberg" },
+    # { url = "https://github.com/banonotit", name = "GitHub" },
+]
+show_feed = true

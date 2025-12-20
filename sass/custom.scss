@@ -1,0 +1,18 @@
+@use "../themes/duckquill/sass/mods/sticked-nav";
+@use "../themes/duckquill/sass/mods/classic-del";
+@use "../themes/duckquill/sass/mods/modern-headings";
+
+// No edge highlights
+:root {
+	--edge-highlight: 0 0 0 transparent;
+}
+
+
+// Use top navbar
+// @see https://duckquill.daudix.one/tricks/#navbar
+
+#site-nav {
+	background: var(--bg-color);
+	border: 1px solid var(--fg-muted-2);
+	border-top: none;
+}

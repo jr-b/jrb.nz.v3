@@ -1,0 +1,22 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/feed",
+      "destination": "https://jrb.nz/feed/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/feed.xml",
+      "destination": "https://jrb.nz/feed/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/:year(2016|2017|2018|2019|2020|2021|2022|2023|2024)/:month/:day/:slug",
+      "destination": "/blog/:slug",
+      "permanent": true
+    }
+  ]
+}

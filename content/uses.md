@@ -1,5 +1,0 @@
-+++
-title="Things I use"
-+++
-
-I'm a full-stack developer. Mainly write in TypeScript and passionate about the Web and its development.

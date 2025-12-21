@@ -1,3 +1,9 @@
+# Example config with all possibles values here:
+# https://codeberg.org/daudix/duckquill/src/branch/main/config.toml
+
+# There's also a lot of info in the Zola's documenation 
+# https://www.getzola.org/documentation/getting-started/configuration/
+
 # The URL the site will be built for
 base_url = "https://jrb.nz"
 title = "jrb"
@@ -5,27 +11,79 @@ theme = "duckquill"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-
+minify_html = false
+generate_feeds = true
+author = "Jeremi R."
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+default_language = "en"
+taxonomies = [{ name = "tags", feed = true }]
+
 [markdown]
+insert_anchor_links = "left"
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+    { theme = "solarized-dark", filename = "syntax-theme-dark.css" },
+    { theme = "solarized-light", filename = "syntax-theme-light.css" },
+]
+smart_punctuation = true
+bottom_footnotes = true
+github_alerts = true
+
+[search]
+index_format = "fuse_json"
+
 
 [extra]
+emoji_favicon = "🍀"
+accent_color = "#ff7800"
+primary_color_alpha = "rgba(255, 120, 0, 0.2)"
+accent_color_dark = "#ffa348"
+primary_color_dark_alpha = "rgba(255, 163, 72, 0.2)"
+issues_url = "https://github.com/jr-b/jrb.nz.v3/issues"
+source_url = "https://github.com/jr-b/jrb.nz.v3/"
 styles = ["custom.css"]
+show_reading_time = true
+show_copy_button = true
+show_backlinks = true
 
 [extra.nav]
+show_theme_switcher = true
+show_feed = true
 links = [
     { url = "@/blog/_index.md", name = "/blog" },
-    { url = "@/uses.md", name = "/use" },
+    { url = "@/projects/_index.md", name = "/projects" },
+    { url = "@/uses/index.md", name = "/uses" },
     { url = "https://letterbird.co/jrb", name = "/email" },
-
-    # { url = "https://mastodon.ml/@bano", name = "Mastodon" },
-    # { url = "https://codeberg.org/bano", name = "Codeberg" },
-    # { url = "https://github.com/banonotit", name = "GitHub" },
 ]
-show_feed = true
+
+[extra.footer]
+# Whether to show "© Title, YEAR"
+show_copyright = true
+# Whether to show "Powered by Zola and Duckquill"
+show_powered_by = true
+# Whether to show link to website source
+show_source = false
+# Custom copyright text
+#
+copyright = "The content of this site is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
+
+
+# GoatCounter analytics; enabled only if present in config.
+[extra.goatcounter]
+# Your GoatCounter server; goatcounter.com is used by default.
+#
+# host = "YOUR_SERVER"
+#
+# Your GoatCounter username
+#user = "duckquill"
+
+[extra.debug]
+# Display outlines around all elements for debugging purposes
+layout = false
+# Don't load any styles for debugging purposes
+no_styles = false

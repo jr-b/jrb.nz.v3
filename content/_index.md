@@ -1,8 +1,14 @@
 +++
+insert_anchor_links = "none"
 +++
 
-# Hello! I'm Ivan
+## Hello! Salut!
 
-I'm a full-stack developer. Mainly write in TypeScript and passionate about the Web and its development.
+I'm Jérémi. Here I write about stuff I do and learn online.
 
-You can call me Ivan or _Ваня_ if you can read the latter 😆
+I'm hoping this place can be a [digital garden](https://maggieappleton.com/garden-history). A kind of space where I work and think with the [garage door up](https://notes.andymatuschak.org/zCMhncA1iSE74MKKYQS5PBZ).
+
+I'm currently working as a Cloud/DevOps Engineer.
+
+📍 Based in Montréal, Qc, Canada.  
+✉️ [email@me here](https://letterbird.co/jrb)

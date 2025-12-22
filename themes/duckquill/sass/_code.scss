@@ -4,6 +4,7 @@ code,
 kbd,
 samp {
 	font-family: var(--font-monospace-code);
+	font-size: var(--font-size-small-em);
 }
 
 code:not(pre code) {

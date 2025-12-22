@@ -5,7 +5,7 @@ date = 2020-07-09
 [taxonomies]
 tags = ["macos", "firefox"]
 [extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
+# archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 Since the end of [uBlock Origin on Safari](https://github.com/el1t/uBlock-Safari/issues/158), I've been using Firefox as my main browser. Here's how I'm setting it up so it's nice and fast.

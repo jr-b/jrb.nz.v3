@@ -1,8 +1,6 @@
 +++
 title="Uses"
 [extra]
-katex = true
-go_to_top = true
 toc = true
 toc_sidebar = false
 show_reading_time = false

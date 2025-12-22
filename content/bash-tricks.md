@@ -2,6 +2,7 @@
 aliases = ["posts/bash-tricks/"]
 title = "Bash with no letters"
 date = 2024-10-10
+updated = 2025-10-10
 [taxonomies]
 tags = ["bash"]
 [extra]

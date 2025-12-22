@@ -39,16 +39,16 @@ index_format = "fuse_json"
 
 
 [extra]
-emoji_favicon = "🍀"                                                                                                                                                                             
-accent_color = "#4a7c7e"  # Deep teal                                                                                                                                                                                                                                                                                                                                                                                                 
-accent_color_dark = "#6ba5a7"  # Softer teal   
+emoji_favicon = "🍀"
+accent_color = "#4a7c7e"  # Deep teal
+accent_color_dark = "#6ba5a7"  # Softer teal
 
 # accent_color = "#ff7800"
 # primary_color_alpha = "rgba(255, 120, 0, 0.2)"
 # accent_color_dark = "#ffa348"
 # primary_color_dark_alpha = "rgba(255, 163, 72, 0.2)"
 
-issues_url = "https://github.com/jr-b/jrb.nz.v3/issues"
+# issues_url = "https://github.com/jr-b/jrb.nz.v3/issues"
 source_url = "https://github.com/jr-b/jrb.nz.v3/"
 styles = ["custom.css"]
 show_reading_time = true
@@ -69,22 +69,20 @@ links = [
 # Whether to show "© Title, YEAR"
 show_copyright = true
 # Whether to show "Powered by Zola and Duckquill"
-show_powered_by = true
+# show_powered_by = true
 # Whether to show link to website source
 show_source = false
 # Custom copyright text
 #
-copyright = "The content of this site is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
+copyright = "Jérémi R. • [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) • [Colophon](/colophon/)"
 
 
 # GoatCounter analytics; enabled only if present in config.
 [extra.goatcounter]
 # Your GoatCounter server; goatcounter.com is used by default.
-#
 # host = "YOUR_SERVER"
-#
 # Your GoatCounter username
-#user = "duckquill"
+user = "jrbnz"
 
 [extra.debug]
 # Display outlines around all elements for debugging purposes

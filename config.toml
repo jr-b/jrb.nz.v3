@@ -4,7 +4,6 @@
 # There's also a lot of info in the Zola's documenation 
 # https://www.getzola.org/documentation/getting-started/configuration/
 
-# The URL the site will be built for
 base_url = "https://jrb.nz"
 title = "jrb"
 theme = "duckquill"

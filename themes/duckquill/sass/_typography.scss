@@ -14,19 +14,19 @@ h6 {
 }
 
 h1 {
-	font-size: var(--font-size-xxx-large);
+	font-size: clamp(2rem, 5vw + 1rem, var(--font-size-xxx-large));
 }
 
 h2 {
-	font-size: var(--font-size-xx-large);
+	font-size: clamp(1.5rem, 4vw + 0.5rem, var(--font-size-xx-large));
 }
 
 h3 {
-	font-size: var(--font-size-x-large);
+	font-size: clamp(1.25rem, 3vw + 0.5rem, var(--font-size-x-large));
 }
 
 h4 {
-	font-size: var(--font-size-large);
+	font-size: clamp(1.125rem, 2vw + 0.5rem, var(--font-size-large));
 }
 
 h5 {

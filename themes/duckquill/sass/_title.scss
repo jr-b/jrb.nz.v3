@@ -1,5 +1,5 @@
 strong.title {
 	color: var(--accent-color);
-	font-size: var(--font-size-x-large);
+	font-size: clamp(1.25rem, 3vw + 0.5rem, var(--font-size-x-large));
 	line-height: 1;
 }

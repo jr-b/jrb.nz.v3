@@ -2,7 +2,7 @@
 title = "Projects"
 +++
 
-List of projects goes here
+Through the years, I've worked on a couple of projects.
 
 1. **Radio-Canada Mini (2021-2024) → [https://radiocanadamini.ca/](https://web.archive.org/web/20240209064457/https://radiocanadamini.ca/)**
    Version légère, _text-only_ du site Radio-Canada.ca. Le projet a été fermé en 2024 suite à un DMCA de la part des avocats de Radio-Canada. On peut voir le site dans les archives de la [Wayback Machine](https://web.archive.org/web/20240209064457/https://radiocanadamini.ca/).

@@ -1,63 +1,70 @@
 #handle {
-	position: fixed;
-	z-index: 999;
-	transition: var(--transition);
-	margin: 0 auto;
-	inset-block-start: 0;
-	inset-inline-end: 0;
-	inset-inline-start: 0;
-	width: min(var(--container-width), 90%);
-	height: 4.25rem;
+	// Hide on desktop, only show on mobile
+	@media only screen and (min-width: 481px) {
+		display: none;
+	}
 
-	&::before {
-		position: absolute;
+	@media only screen and (max-width: 480px) {
+		position: fixed;
+		z-index: 999;
 		transition: var(--transition);
 		margin: 0 auto;
-		inset-block-start: 0.5rem;
+		inset-block-start: 0;
 		inset-inline-end: 0;
 		inset-inline-start: 0;
-		box-shadow: var(--edge-highlight);
-		border-radius: 999px;
-		background-color: var(--accent-color);
-		width: min(calc(var(--container-width) / 4), 100%);
-		height: 0.5rem;
-		content: "";
-	}
-
-	&:hover::before,
-	&:has(+ #site-nav:hover)::before,
-	&:has(+ #site-nav *:focus-visible, + #site-nav *:focus)::before {
-		transform: translateY(-1rem) scale(0.5);
-		opacity: 0;
-	}
-
-	&:hover + #site-nav,
-	& + #site-nav:hover,
-	& + #site-nav:has(*:focus-visible, *:focus) {
-		transform: none;
-		opacity: 1;
-		pointer-events: auto;
+		width: min(var(--container-width), 90%);
+		height: 4.25rem;
 
 		&::before {
-			-webkit-backdrop-filter: var(--blur);
-			backdrop-filter: var(--blur);
-		}
-	}
-
-	& + #site-nav {
-		position: fixed;
-		transform: translateY(-1rem) scale(0.5);
-		transform-origin: top;
-		opacity: 0;
-		transition: var(--transition);
-		margin: 0 auto;
-		width: max-content;
-		pointer-events: none;
-
-		&::before {
-			-webkit-backdrop-filter: saturate(1) blur(0);
-			backdrop-filter: saturate(1) blur(0);
+			position: absolute;
 			transition: var(--transition);
+			margin: 0 auto;
+			inset-block-start: 0.5rem;
+			inset-inline-end: 0;
+			inset-inline-start: 0;
+			box-shadow: var(--edge-highlight);
+			border-radius: 999px;
+			background-color: var(--accent-color);
+			width: min(calc(var(--container-width) / 4), 100%);
+			height: 0.5rem;
+			content: "";
+		}
+
+		&:hover::before,
+		&:has(+ #site-nav:hover)::before,
+		&:has(+ #site-nav *:focus-visible, + #site-nav *:focus)::before {
+			transform: translateY(-1rem) scale(0.5);
+			opacity: 0;
+		}
+
+		&:hover + #site-nav,
+		& + #site-nav:hover,
+		& + #site-nav:has(*:focus-visible, *:focus) {
+			transform: none;
+			opacity: 1;
+			pointer-events: auto;
+
+			&::before {
+				-webkit-backdrop-filter: var(--blur);
+				backdrop-filter: var(--blur);
+			}
+		}
+
+		& + #site-nav {
+			position: fixed;
+			transform: translateY(-1rem) scale(0.5);
+			transform-origin: top;
+			opacity: 0;
+			transition: var(--transition);
+			margin: 0 auto;
+			width: max-content;
+			pointer-events: none;
+
+			&::before {
+				-webkit-backdrop-filter: saturate(1) blur(0);
+				backdrop-filter: saturate(1) blur(0);
+				transition: var(--transition);
+			}
 		}
 	}
 }

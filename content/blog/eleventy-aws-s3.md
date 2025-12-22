@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/eleventy-aws-s3/"]
 title = "Basic CI/CD pipeline with AWS S3, 11ty and GitHub Actions"
 date = 2022-08-25
 [taxonomies]

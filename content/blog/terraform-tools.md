@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/terraform-tools/"]
 title = "Terraform/terragrunt tools"
 date = 2024-11-06
 [taxonomies]

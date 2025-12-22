@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/aws-assume-role/"]
 title = "Zsh function to assume a role in AWS"
 date = 2023-06-14
 [taxonomies]

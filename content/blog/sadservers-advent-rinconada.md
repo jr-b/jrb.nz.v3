@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/sadservers-advent-rinconada/"]
 title = "La Rinconada - Advent of Sysadmin 2025 - 12/05"
 date = 2025-12-05
 [taxonomies]

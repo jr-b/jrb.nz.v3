@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/methodologies-gestion-projet/"]
 title = "Notes: méthodologies en gestion de projet"
 date = 2022-02-08
 [taxonomies]

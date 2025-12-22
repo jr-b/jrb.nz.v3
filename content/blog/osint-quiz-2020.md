@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/osint-quiz-2020/"]
 title = "OSINT quiz 2020 - Sector035"
 date = 2022-03-10
 [taxonomies]

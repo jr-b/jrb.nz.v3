@@ -19,7 +19,7 @@
 		// COLORS
 		--bg-color: color-mix(in srgb, var(--accent-color) 10%, black);
 		--bg-overlay: linear-gradient(rgb(0 0 0 / 0.9), rgb(0 0 0 / 0.9));
-		--fg-color: rgb(255 255 255);
+		--fg-color: #cecdc3; // lighter white for my eyes
 		--fg-contrast: rgb(0 0 0 / 0.8);
 		--fg-muted-1: rgb(255 255 255 / 0.05);
 		--fg-muted-2: rgb(255 255 255 / 0.1);
@@ -100,6 +100,7 @@
 
 		// FONTS
 		--font-system-ui: system-ui, sans-serif;
+		--font-atkinson-hyperlegible-next: "Atkinson Hyperlegible Next", sans-serif;
 		--font-transitional: Charter, "Bitstream Charter", "Sitka Text", Cambria,
 			serif;
 		--font-old-style: "Iowan Old Style", "Palatino Linotype",

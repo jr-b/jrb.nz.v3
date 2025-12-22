@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/projet-radio-canada-lite/"]
 title = "Projet: Radio-Canada Mini"
 date = 2022-01-10
 [taxonomies]

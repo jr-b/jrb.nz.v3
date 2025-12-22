@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/docker-setup-rpi/"]
 title = "Configurer Docker sur un Raspberry Pi"
 date = 2020-12-20
 [taxonomies]

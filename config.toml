@@ -39,11 +39,15 @@ index_format = "fuse_json"
 
 
 [extra]
-emoji_favicon = "🍀"
-accent_color = "#ff7800"
-primary_color_alpha = "rgba(255, 120, 0, 0.2)"
-accent_color_dark = "#ffa348"
-primary_color_dark_alpha = "rgba(255, 163, 72, 0.2)"
+emoji_favicon = "🍀"                                                                                                                                                                             
+accent_color = "#4a7c7e"  # Deep teal                                                                                                                                                                                                                                                                                                                                                                                                 
+accent_color_dark = "#6ba5a7"  # Softer teal   
+
+# accent_color = "#ff7800"
+# primary_color_alpha = "rgba(255, 120, 0, 0.2)"
+# accent_color_dark = "#ffa348"
+# primary_color_dark_alpha = "rgba(255, 163, 72, 0.2)"
+
 issues_url = "https://github.com/jr-b/jrb.nz.v3/issues"
 source_url = "https://github.com/jr-b/jrb.nz.v3/"
 styles = ["custom.css"]

@@ -60,9 +60,9 @@
 		h3 {
 			margin: 0;
 			color: var(--accent-color);
-			font-weight: bold;
+			font-weight: 600;
 			line-height: 1;
-			font-family: var(--font-system-ui);
+			font-family: var(--font-atkinson-hyperlegible-next);
 
 			&::after {
 				-webkit-mask-image: var(--icon-right);

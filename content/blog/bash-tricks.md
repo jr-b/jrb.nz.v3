@@ -1,6 +1,8 @@
 +++
+aliases = ["posts/bash-tricks/"]
 title = "Bash with no letters"
 date = 2024-10-10
+aliases = ["posts/bash-tricks/"]
 [taxonomies]
 tags = ["bash"]
 [extra]

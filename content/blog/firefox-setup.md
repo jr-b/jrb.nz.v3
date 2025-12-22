@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/firefox-setup/"]
 title = "Privacy oriented Firefox set-up"
 date = 2020-07-09
 [taxonomies]

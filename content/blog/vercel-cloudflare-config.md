@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/vercel-cloudflare-config/"]
 title = "Comment configurer Cloudflare avec Vercel"
 date = 2022-02-11
 [taxonomies]

@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/aws-terraform-devops01/"]
 title = "First steps with AWS, Terraform, Jenkins and Ansible"
 date = 2022-07-29
 [taxonomies]

@@ -1,4 +1,5 @@
 +++
+aliases = ["posts/mongodb-macos/"]
 title = "Quick setup: MongoDB on macOS with Homebrew"
 date = 2023-06-16
 [taxonomies]

@@ -3,8 +3,6 @@ title = "First steps with AWS, Terraform, Jenkins and Ansible"
 date = 2022-07-29
 [taxonomies]
 tags = ["devops", "terraform", "ansible", "aws"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 > I'm publishing this as an updated version of Scotty Parlor's [LEARNING DEVOPS: AWS, TERRAFORM, ANSIBLE, JENKINS, AND DOCKER](https://www.scottyfullstack.com/blog/devops-01-aws-terraform-ansible-jenkins-and-docker/) tutorial. It has allowed me to play with Terraform, Ansible and Jenkins for the first time. Needless to say, I learned a lot. I made some modification here and there where I could.

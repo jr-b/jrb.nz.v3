@@ -3,8 +3,6 @@ title = "Comment configurer Cloudflare avec Vercel"
 date = 2022-02-11
 [taxonomies]
 tags = ["dns", "web"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 Je fais la gestion DNS de mes projets sur Cloudflare. J'ai eu quelques pépins techniques en configurant mes noms de domaine avec des projets hébergés chez Vercel. Je recevais quotidiennement des courriels de Vercel me signalant que la configuration DNS de mes projets était incorrecte. Je me suis penché sur le problème pour tenter de trouver une solution.

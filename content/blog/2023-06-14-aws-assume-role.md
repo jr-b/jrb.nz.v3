@@ -3,8 +3,6 @@ title = "Zsh function to assume a role in AWS"
 date = 2023-06-14
 [taxonomies]
 tags = ["aws", "script", "cli", "web"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 Working in AWS, I sometimes need to test a role to debug some issues or validate some hypotheses.

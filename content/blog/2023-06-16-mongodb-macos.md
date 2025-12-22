@@ -3,8 +3,6 @@ title = "Quick setup: MongoDB on macOS with Homebrew"
 date = 2023-06-16
 [taxonomies]
 tags = ["mongodb", "macos", "brew"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 On macOS, we can quickly setup a MongoDB server with the following CLI commands.

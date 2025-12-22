@@ -11,4 +11,8 @@ I'm hoping this place can be a [digital garden](https://maggieappleton.com/garde
 I'm currently working as a Cloud/DevOps Engineer.
 
 📍 Based in Montréal, Qc, Canada.  
-✉️ [email@me here](https://letterbird.co/jrb)
+✉️ [email@me](https://letterbird.co/jrb)
+
+{% for p in range(end=10) %}
+number: {{ now() | date(format="%2f") }} <br>
+{% endfor %}

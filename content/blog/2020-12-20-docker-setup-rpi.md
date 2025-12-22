@@ -3,8 +3,6 @@ title = "Configurer Docker sur un Raspberry Pi"
 date = 2020-12-20
 [taxonomies]
 tags = ["docker", "raspberry pi"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 Petit guide rapide pour configurer Docker sur un Raspberry Pi.

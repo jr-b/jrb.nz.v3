@@ -3,8 +3,6 @@ title = "Projet: Radio-Canada Mini"
 date = 2022-01-10
 [taxonomies]
 tags = ["projets", "Radio-Canada Mini", "web"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 > En 2021, j’ai découvert la version _lite_ de CBC.ca, disponible à la page https://cbc.ca/lite. Je me suis lancé le défi de créer une version équivalente pour le contenu de Radio-Canada.ca.<br>

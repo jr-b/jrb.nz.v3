@@ -5,7 +5,6 @@ date = 2022-02-08
 tags = ["gestion de projet", "notes"]
 [extra]
 draft = true
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 > Quelques notes glanées au fil de mes lectures sur la gestion de projets et les différentes méthodologies.

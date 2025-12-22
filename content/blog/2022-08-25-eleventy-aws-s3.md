@@ -3,8 +3,6 @@ title = "Basic CI/CD pipeline with AWS S3, 11ty and GitHub Actions"
 date = 2022-08-25
 [taxonomies]
 tags = ["devops", "aws", "github", "ci/cd"]
-[extra]
-archive = "This post was published more than 2 years ago. It's content is most probably out of date!"
 +++
 
 > As a DevOps learning project, I've decided to host a copy of this website on AWS using S3 and CloudFront services. From the current process that's using Vercel as a build/deploy tool, I'm now trying the manual way to learn the intricacies of it all: GitHub Actions, CloudFront and S3. The first step is to do it with the AWS web management console, and then to use Terraform and IaC to put this in place.

@@ -1,0 +1,46 @@
+{%- if page.date -%}
+	{%- set post_timestamp = page.date | date(format="%s") | int -%}
+	{%- set now_timestamp = now() | date(format="%s") | int -%}
+	{%- set two_years_in_seconds = 63072000 -%}
+	{%- set is_old_post = now_timestamp - post_timestamp > two_years_in_seconds -%}
+{%- else -%}
+	{%- set is_old_post = false -%}
+{%- endif -%}
+
+{%- set has_archive = page.extra.archive is defined -%}
+{%- set archive_is_false = has_archive and page.extra.archive == false -%}
+{%- set should_show_archive = (is_old_post or has_archive) and not archive_is_false -%}
+
+{%- if should_show_archive -%}
+	<div class="statement-container archive">
+		<strong class="title">
+			<i class="icon"></i>
+			{{- macros_translate::translate(key="archived", default="Archived", language_strings=language_strings) -}}
+		</strong>
+		{%- if has_archive and page.extra.archive != true -%}
+			{{ page.extra.archive | markdown | safe }}
+		{%- else -%}
+			<p>This post was published more than 2 years ago. Its content is most probably out of date!</p>
+		{%- endif -%}
+	</div>
+{%- endif -%}
+
+{%- if page.extra.trigger -%}
+	<div class="statement-container trigger">
+		<strong class="title">
+			<i class="icon"></i>
+			{{- macros_translate::translate(key="trigger_warning", default="Trigger Warning", language_strings=language_strings) -}}
+		</strong>
+		{{ page.extra.trigger | markdown | safe }}
+	</div>
+{%- endif -%}
+
+{%- if page.extra.disclaimer -%}
+	<div class="statement-container disclaimer">
+		<strong class="title">
+			<i class="icon"></i>
+			{{-macros_translate::translate(key="disclaimer", default="Disclaimer", language_strings=language_strings) -}}
+		</strong>
+		{{ page.extra.disclaimer | markdown | safe }}
+	</div>
+{%- endif -%}

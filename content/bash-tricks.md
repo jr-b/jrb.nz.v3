@@ -6,7 +6,6 @@ updated = 2025-10-10
 [taxonomies]
 tags = ["bash"]
 [extra]
-draft = true
 +++
 
 I recently did a challenge on PicoCTF (`U2Fuc0FscGhhCg` 🐶) and I had to explore some bash trickery to solve it. I learned a few that are worth noting here for future me or future you.

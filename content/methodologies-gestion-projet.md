@@ -5,7 +5,6 @@ date = 2022-02-08
 [taxonomies]
 tags = ["gestion de projet", "notes"]
 [extra]
-draft = true
 +++
 
 > Quelques notes glanées au fil de mes lectures sur la gestion de projets et les différentes méthodologies.

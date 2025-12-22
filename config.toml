@@ -4,7 +4,7 @@
 # There's also a lot of info in the Zola's documenation 
 # https://www.getzola.org/documentation/getting-started/configuration/
 
-base_url = "https://jrb.nz"
+base_url = "https://dev.jrb.nz"
 title = "jrb"
 theme = "duckquill"
 
@@ -39,8 +39,8 @@ index_format = "fuse_json"
 
 [extra]
 emoji_favicon = "🍀"
-accent_color = "#4a7c7e"  # Deep teal
-accent_color_dark = "#6ba5a7"  # Softer teal
+accent_color = "#4a7c7e"      # Deep teal
+accent_color_dark = "#6ba5a7" # Softer teal
 
 # accent_color = "#ff7800"
 # primary_color_alpha = "rgba(255, 120, 0, 0.2)"
@@ -55,7 +55,7 @@ show_copy_button = true
 show_backlinks = true
 
 [extra.nav]
-auto_hide = true 
+auto_hide = true
 show_theme_switcher = true
 show_feed = true
 links = [

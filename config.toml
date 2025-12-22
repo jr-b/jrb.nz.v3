@@ -59,6 +59,7 @@ auto_hide = true
 show_theme_switcher = true
 show_feed = true
 links = [
+    { url = "@/blog/_index.md", name = "/blog" },
     { url = "@/projects/_index.md", name = "/projects" },
     { url = "@/uses/_index.md", name = "/uses" },
     { url = "https://letterbird.co/jrb", name = "/email" },

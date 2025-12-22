@@ -1,0 +1,3 @@
+[submodule "themes/zola-researcher"]
+	path = themes/zola-researcher
+	url = https://github.com/lukehsiao/zola-researcher.git

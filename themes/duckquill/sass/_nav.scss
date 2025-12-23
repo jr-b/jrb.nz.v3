@@ -3,10 +3,28 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 3em 0;
-  margin: 4.25rem auto 4rem;
-  width: calc(100% - 2rem);
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+  margin: 4.25rem auto 1rem;
+  padding-bottom: 1rem;
+  width: calc(100% - 4rem);
   max-width: var(--container-width);
+  background: var(--bg-color);
+  //border-radius: 8px;
+
+  &.nav-hidden {
+    transform: translateY(-150%);
+  }
+
+  // Respect user's motion preferences for accessibility
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.3s ease-in-out;
+  }
 
   a {
     text-decoration: none;

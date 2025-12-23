@@ -1,6 +1,16 @@
 +++
 insert_anchor_links = "none"
+
 [extra]
+# Show recent blog posts on homepage (default: true)
+show_recent_posts = true
+# Maximum number of recent posts to display (default: 5)
+max_recent_posts = 5
+
+# Show recent projects on homepage (default: false)
+# Uncomment to enable:
+show_recent_projects = true
+max_recent_projects = 3
 +++
 
 # Hello! Salut!

@@ -1,5 +1,8 @@
 +++
 title = "Projects"
+sort_by = "date"
+template = "article_list.html"
+page_template = "article.html"
 +++
 
 Through the years, I've worked on a couple of projects. Here's a list of those worth mentioning:

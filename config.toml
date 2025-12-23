@@ -5,7 +5,7 @@
 # https://www.getzola.org/documentation/getting-started/configuration/
 
 base_url = "https://dev.jrb.nz"
-title = "jrb"
+title = "jrb.nz"
 theme = "duckquill"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -39,13 +39,8 @@ index_format = "fuse_json"
 
 [extra]
 emoji_favicon = "🍀"
-accent_color = "#4a7c7e"      # Deep teal
-accent_color_dark = "#6ba5a7" # Softer teal
-
-# accent_color = "#ff7800"
-# primary_color_alpha = "rgba(255, 120, 0, 0.2)"
-# accent_color_dark = "#ffa348"
-# primary_color_dark_alpha = "rgba(255, 163, 72, 0.2)"
+# accent_color = "#EBD418"
+accent_color_dark = "#F2E9E2"
 
 # issues_url = "https://github.com/jr-b/jrb.nz.v3/issues"
 source_url = "https://github.com/jr-b/jrb.nz.v3/"
@@ -64,6 +59,14 @@ links = [
     { url = "@/uses/_index.md", name = "/uses" },
     { url = "https://letterbird.co/jrb", name = "/email" },
 ]
+
+# Social links for navbar (optional)
+# Uncomment and customize as needed
+# [extra.socials]
+# socials = [
+#     { name = "GitHub", url = "https://github.com/yourusername", icon = "github" },
+#     { name = "Mastodon", url = "https://mastodon.social/@yourusername", icon = "mastodon" },
+# ]
 
 [extra.footer]
 # Whether to show "© Title, YEAR"

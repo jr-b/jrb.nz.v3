@@ -3,7 +3,7 @@ insert_anchor_links = "none"
 [extra]
 +++
 
-## Hello! Salut!
+# Hello! Salut!
 
 I'm Jérémi. Here I write about stuff I do and learn online.
 

@@ -26,7 +26,7 @@
               {%- endif %}
             {%- endif %}
             <article {% if article_type %}class="{{ article_type }}"{% endif %} {% if blurnail %}style="--blurnail: url('{{ blurnail.url }}')"{% endif %}>
-              <a href="{{ page.permalink | safe }}"></a>
+              <a href="{{ page.permalink | safe }}" aria-label="Read more: {{ page.title }}"></a>
               <h3>{{ page.title }}</h3>
               {%- if page.description %}
                 {{ page.description | markdown | safe }}
@@ -86,7 +86,7 @@
             {%- endif %}
           {%- endif %}
           <article {% if article_type %}class="{{ article_type }}"{% endif %} {% if blurnail %}style="--blurnail: url('{{ blurnail.url }}')"{% endif %}>
-            <a href="{{ page.permalink | safe }}"></a>
+            <a href="{{ page.permalink | safe }}" aria-label="Read more: {{ page.title }}"></a>
             <h3>{{ page.title }}</h3>
             {%- if page.description %}
               {{ page.description | markdown | safe }}

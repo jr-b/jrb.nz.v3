@@ -32,7 +32,7 @@
 			{%- endif -%}
 		{%- endif -%}
 		<article {% if article_type %}class="{{ article_type }}"{% endif %} {% if blurnail %}style="--blurnail: url('{{ blurnail.url }}')"{% endif %}>
-			<a href="{{ page.permalink | safe }}"></a>
+			<a href="{{ page.permalink | safe }}" aria-label="Read more: {{ page.title }}"></a>
 			{% if article_type %}
 				<span class="badge">
 					<i class="icon"></i>

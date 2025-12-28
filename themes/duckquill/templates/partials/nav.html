@@ -1,0 +1,58 @@
+<header>
+  <div class="nav-inner">
+    <div class="main">
+      {% if section %}
+      <a href="{{ config.base_url }}">{{ config.title }}</a>
+      {% if section.title %}
+      {% set section_path = section.path | trim_end_matches(pat="_index.md") | trim_end_matches(pat="/") %}
+      {% if section_path != "" %}
+      / <a href="{{ section.permalink }}">{{ section.title }}</a>
+      {% endif %}
+      {% endif %}
+      {% elif page %}
+      {% if page.ancestors | length > 0 %}
+      {% set section_path = page.ancestors | last %}
+      {% set current_section = get_section(path=section_path) %}
+      <a href="{{ config.base_url }}">{{ config.title }}</a>
+      {% if current_section.title %}
+      / <a href="{{ current_section.permalink }}">{{ current_section.title }}</a>
+      {% endif %}
+      {% else %}
+      <a href="{{ config.base_url }}">{{ config.title }}</a>
+      {% endif %}
+      {% else %}
+      <a href="{{ config.base_url }}">{{ config.title }}</a>
+      {% endif %}
+    </div>
+
+    <nav>
+      {% if config.extra.nav.links %}
+      {% for link in config.extra.nav.links %}
+      {% if link.url is starting_with("http") %}
+      <a href="{{ link.url }}">{{ link.name }}</a>
+      {% else %}
+      <a href="{{ get_url(path=link.url, lang=lang) }}">{{ link.name }}</a>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if config.extra.socials %}
+      {% for social in config.extra.socials %}
+      <a rel="me" href="{{ social.url }}" class="social" title="{{ social.name }}">
+        <img alt="{{ social.name }}" src="{{ get_url(path=" icons/social/" ~ social.icon ~ ".svg" ) }}">
+      </a>
+      {% endfor %}
+      {% endif %}
+
+      <button id="theme-light" class="theme-toggle" title="Light theme" style="display:none;">
+        <i class="icon icon-sun"></i>
+      </button>
+      <button id="theme-dark" class="theme-toggle" title="Dark theme" style="display:none;">
+        <i class="icon icon-moon"></i>
+      </button>
+      <button id="theme-system" class="theme-toggle" title="System theme" style="display:none;">
+        <i class="icon icon-system"></i>
+      </button>
+    </nav>
+  </div>
+</header>

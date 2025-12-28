@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% import "macros/translate.html" as macros_translate %}
+
+{% block content %}
+{# Homepage intro content #}
+{{ section.content | safe }}
+
+{# Recent blog posts section #}
+{%- if section.extra.show_recent_posts | default(value=true) %}
+  {%- set blog_section = get_section(path="blog/_index.md") %}
+  {%- if blog_section %}
+    <section class="recent-posts">
+      <h2>
+        <a href="{{ blog_section.permalink }}">Recent Posts</a>
+      </h2>
+      {%- set max_posts = section.extra.max_recent_posts | default(value=5) %}
+      {%- set recent_posts = blog_section.pages | slice(end=max_posts) %}
+
+      {%- if recent_posts | length > 0 %}
+        <div id="article-list">
+          {%- for page in recent_posts %}
+            {%- set article_type = "" %}
+            {%- if page.extra.banner %}
+              {%- if config.extra.blurnail is not defined or config.extra.blurnail %}
+                {%- set blurnail = resize_image(path=page.colocated_path ~ page.extra.banner, width=4, height=2, op="fill", format="webp") %}
+              {%- endif %}
+            {%- endif %}
+            <article {% if article_type %}class="{{ article_type }}"{% endif %} {% if blurnail %}style="--blurnail: url('{{ blurnail.url }}')"{% endif %}>
+              <a href="{{ page.permalink | safe }}" aria-label="Read more: {{ page.title }}"></a>
+              <h3>{{ page.title }}</h3>
+              {%- if page.description %}
+                {{ page.description | markdown | safe }}
+              {%- endif %}
+              {%- if page.date %}
+                <div class="details">
+                  <small>
+                    <time datetime="{{ page.date | date(format='%+') }}" pubdate>
+                      {{- page.date | date(format="%B %d, %Y") -}}
+                    </time>
+                  </small>
+                  {%- if page.taxonomies %}
+                    {%- for name, taxon in page.taxonomies %}
+                      <small>
+                        <ul class="tags">
+                          <a class="tag" href="{{- get_url(path=name, lang=lang) | lower -}}">{{ macros_translate::translate(key=name, default=name, language_strings=language_strings) }}:</a>
+                          {%- for item in taxon %}
+                            <li><a class="tag" href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">{{ item }}</a></li>
+                          {%- endfor %}
+                        </ul>
+                      </small>
+                    {%- endfor %}
+                  {%- endif %}
+                </div>
+              {%- endif %}
+            </article>
+          {%- endfor %}
+        </div>
+
+        {%- if blog_section.pages | length > max_posts %}
+          <p class="view-all">
+            <a href="{{ blog_section.permalink }}">View all posts →</a>
+          </p>
+        {%- endif %}
+      {%- endif %}
+    </section>
+  {%- endif %}
+{%- endif %}
+
+{# Recent projects section #}
+{%- if section.extra.show_recent_projects | default(value=false) %}
+  {%- set projects_section = get_section(path="projects/_index.md") %}
+  {%- if projects_section and projects_section.pages %}
+    <section class="recent-projects">
+      <h2>
+        <a href="{{ projects_section.permalink }}">Featured Projects</a>
+      </h2>
+      {%- set max_projects = section.extra.max_recent_projects | default(value=3) %}
+      {%- set recent_projects = projects_section.pages | slice(end=max_projects) %}
+
+      <div id="article-list">
+        {%- for page in recent_projects %}
+          {%- set article_type = "" %}
+          {%- if page.extra.banner %}
+            {%- if config.extra.blurnail is not defined or config.extra.blurnail %}
+              {%- set blurnail = resize_image(path=page.colocated_path ~ page.extra.banner, width=4, height=2, op="fill", format="webp") %}
+            {%- endif %}
+          {%- endif %}
+          <article {% if article_type %}class="{{ article_type }}"{% endif %} {% if blurnail %}style="--blurnail: url('{{ blurnail.url }}')"{% endif %}>
+            <a href="{{ page.permalink | safe }}" aria-label="Read more: {{ page.title }}"></a>
+            <h3>{{ page.title }}</h3>
+            {%- if page.description %}
+              {{ page.description | markdown | safe }}
+            {%- endif %}
+            {%- if page.date %}
+              <div class="details">
+                <small>
+                  <time datetime="{{ page.date | date(format='%+') }}" pubdate>
+                    {{- page.date | date(format="%B %d, %Y") -}}
+                  </time>
+                </small>
+                {%- if page.taxonomies %}
+                  {%- for name, taxon in page.taxonomies %}
+                    <small>
+                      <ul class="tags">
+                        <a class="tag" href="{{- get_url(path=name, lang=lang) | lower -}}">{{ macros_translate::translate(key=name, default=name, language_strings=language_strings) }}:</a>
+                        {%- for item in taxon %}
+                          <li><a class="tag" href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">{{ item }}</a></li>
+                        {%- endfor %}
+                      </ul>
+                    </small>
+                  {%- endfor %}
+                {%- endif %}
+              </div>
+            {%- endif %}
+          </article>
+        {%- endfor %}
+      </div>
+
+      {%- if projects_section.pages | length > max_projects %}
+        <p class="view-all">
+          <a href="{{ projects_section.permalink }}">View all projects →</a>
+        </p>
+      {%- endif %}
+    </section>
+  {%- endif %}
+{%- endif %}
+
+{% endblock content %}

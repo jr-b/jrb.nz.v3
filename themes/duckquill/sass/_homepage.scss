@@ -1,0 +1,39 @@
+// Homepage recent posts and projects sections
+
+.recent-posts,
+.recent-projects {
+  margin: 4rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Reuses existing #article-list styles from _article-list.scss
+  #article-list {
+    margin-bottom: 2rem;
+  }
+
+  .view-all {
+    margin-top: 2rem;
+    text-align: right;
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

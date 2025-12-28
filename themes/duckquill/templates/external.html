@@ -1,0 +1,13 @@
+{% block content %}
+
+<main>
+  {% if title %}
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  {% endif %}
+  <article class="content">
+    {{ page.content | safe }}
+  </article>
+</main>
+{% endblock content %}

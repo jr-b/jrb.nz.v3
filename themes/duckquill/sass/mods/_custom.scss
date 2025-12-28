@@ -1,0 +1,21 @@
+body {
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+footer {
+  font-size: .9rem;
+}
+
+
+#site-nav {
+	background: var(--bg-color);
+	border: 1px solid var(--fg-muted-2);
+	border-top: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');

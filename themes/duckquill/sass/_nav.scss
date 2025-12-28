@@ -1,0 +1,93 @@
+header {
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+  margin: 4.25rem auto 1rem;
+  padding: 1rem 0;
+  width: 100%;
+
+  // Frosted glass effect
+  background: var(--bg-color);
+
+  &.nav-hidden {
+    transform: translateY(-150%);
+  }
+
+  // Respect user's motion preferences for accessibility
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  // Inner wrapper to constrain content width while background stays wider
+  .nav-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    //padding: 0 1rem;
+    width: 100%;
+    max-width: min(var(--container-width), 90%);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin: 0 3px;
+  }
+
+  .social img {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    filter: var(--icon-filter, none);
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 3px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    vertical-align: -0.15em;
+    display: inline-block;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .icon {
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-color: currentColor;
+    }
+
+    .icon-sun {
+      -webkit-mask-image: var(--icon-theme-light);
+      mask-image: var(--icon-theme-light);
+    }
+
+    .icon-moon {
+      -webkit-mask-image: var(--icon-theme-dark);
+      mask-image: var(--icon-theme-dark);
+    }
+
+    .icon-system {
+      -webkit-mask-image: var(--icon-theme-system);
+      mask-image: var(--icon-theme-system);
+    }
+  }
+}

@@ -39,7 +39,7 @@ index_format = "fuse_json"
 
 [extra]
 emoji_favicon = "🌿"
-# accent_color = "#EBD418"
+accent_color = "#4A4A4A"
 accent_color_dark = "#F2E9E2"
 
 # issues_url = "https://github.com/jr-b/jrb.nz.v3/issues"

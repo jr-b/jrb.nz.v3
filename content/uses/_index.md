@@ -21,11 +21,11 @@ Following the `/uses` trend, this is a page to track what I use daily. You can s
 
 ## Computers
 
-- Work: Macbook Pro 16" 2024 (M4 Pro, 48 GB)
-- Personal: Macbook Pro 14" 2021 (M1 Pro, 16 GB, 1 TB)
-- Home lab:
+- Work: [Macbook Pro 16" 2024](https://support.apple.com/en-us/121554) (M4 Pro, 48 GB)
+- Personal: [Macbook Pro 14" 2021](https://support.apple.com/en-us/111902) (M1 Pro, 16 GB, 1 TB)
+- Homelab:
   - Proxmox VE: [Lenovo M720q](https://www.lenovo.com/ca/en/p/desktops/thinkcentre/m-series-tiny/thinkcentre-m720q/11tc1mtm72q) (i3-8100T, 32 GB, 1 TB)
-  - Proxmox Backup Server: [HP EliteDesk 705 G3](https://support.hp.com/us-en/product/product-specs/hp-elitedesk-705-g3-desktop-mini-pc/10669600) (AMD PRO A6-8570E R5, 16 GB, 2 TB)
+  - Proxmox Backup Server: [HP EliteDesk 705 G3 Mini](https://support.hp.com/us-en/product/product-specs/hp-elitedesk-705-g3-desktop-mini-pc/10669600) (AMD PRO A6-8570E R5, 16 GB, 2 TB)
   - [Mac Mini M1](https://support.apple.com/en-us/111894)
   - [Raspberry Pi 3 B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
 

@@ -20,5 +20,5 @@ I'm hoping this place can be a [digital garden](https://maggieappleton.com/garde
 
 I'm currently working as a Cloud/DevOps Engineer.
 
-📍 Based in Montréal, Qc, Canada
+📍 Based in Montréal, Qc, Canada  
 ✉️ [email@me](https://letterbird.co/jrb)

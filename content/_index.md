@@ -8,7 +8,6 @@ show_recent_posts = true
 max_recent_posts = 5
 
 # Show recent projects on homepage (default: false)
-# Uncomment to enable:
 show_recent_projects = true
 max_recent_projects = 3
 +++
@@ -21,5 +20,5 @@ I'm hoping this place can be a [digital garden](https://maggieappleton.com/garde
 
 I'm currently working as a Cloud/DevOps Engineer.
 
-📍 Based in Montréal, Qc, Canada.  
+📍 Based in Montréal, Qc, Canada
 ✉️ [email@me](https://letterbird.co/jrb)

@@ -6,23 +6,9 @@ title = "Colophon"
 
 This website is made using a static site generator called [Zola](https://www.getzola.org/). It's using a customized version of the [Duckquill theme](https://codeberg.org/daudix/duckquill).
 
-It is deployed and hosted on Cloudflare Pages. The source code is [publicly available on Github](https://github.com).
+It is deployed and hosted on Cloudflare Pages. The source code is [publicly available on Github](https://github.com/jr-b/jrb.nz.v3/).
 
 The main font used is [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next).
-
-## Code
-
-To build and maintain this site, I use:
-
-- Markdown
-- HTML
-- CSS
-- Atom feed (RSS)
-- Github repository
-
-## Fonts and visuals
-
-The color palette is made using:
 
 ## Analytics
 
@@ -32,14 +18,10 @@ I'm using Goat Counter to track the visits on the website: [stats.jrb.nz](https:
 
 ## Sustainability
 
-- Lighthouser Report
-- Page weigth
-- Website carbon stats
-- Ecograder
-- Green web foundation stats
+- [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-dev-jrb-nz/mxlsl2duxy?form_factor=mobile)
+- [Website Carbon Calculator](https://www.websitecarbon.com/website/jrb-nz/)
+- [Ecograder](https://ecograder.com/report/TjTGkiJd1ARvmNeFtaaPiYq2)
 
 ## Accessibility
-
-Making sure the web is accessible to everyone is important. Using the WAVE AIM Score, I'm trying to make sure
 
 - Wave Report

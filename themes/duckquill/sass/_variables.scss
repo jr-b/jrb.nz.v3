@@ -17,7 +17,7 @@
 @include theme-variables using ($theme) {
 	@if $theme == "dark" {
 		// COLORS
-		--bg-color: color-mix(in srgb, var(--accent-color) 10%, black);
+		--bg-color: rgb(27, 26, 26);
 		--bg-overlay: linear-gradient(rgb(0 0 0 / 0.9), rgb(0 0 0 / 0.9));
 		--fg-color: #cecdc3; // lighter white for my eyes
 		--fg-contrast: rgb(0 0 0 / 0.8);
@@ -156,7 +156,7 @@
 
 		// STATES
 		--hover: scale(1.1);
-		--active: scale(0.9);
+		--active: scale(1);
 
 		// TRANSITIONS
 		--transition: 0.2s;

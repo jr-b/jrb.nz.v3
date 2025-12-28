@@ -14,7 +14,7 @@ minify_html = false
 generate_feeds = true
 author = "Jeremi R."
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+# build_search_index = true
 
 default_language = "en"
 taxonomies = [{ name = "tags", feed = true }]
@@ -60,14 +60,6 @@ links = [
     { url = "https://letterbird.co/jrb", name = "/email" },
 ]
 
-# Social links for navbar (optional)
-# Uncomment and customize as needed
-# [extra.socials]
-# socials = [
-#     { name = "GitHub", url = "https://github.com/yourusername", icon = "github" },
-#     { name = "Mastodon", url = "https://mastodon.social/@yourusername", icon = "mastodon" },
-# ]
-
 [extra.footer]
 # Whether to show "© Title, YEAR"
 show_copyright = true
@@ -82,9 +74,6 @@ copyright = "Jérémi R. • [CC BY-SA 4.0](https://creativecommons.org/licenses
 
 # GoatCounter analytics; enabled only if present in config.
 [extra.goatcounter]
-# Your GoatCounter server; goatcounter.com is used by default.
-# host = "YOUR_SERVER"
-# Your GoatCounter username
 user = "jrbnz"
 
 [extra.debug]

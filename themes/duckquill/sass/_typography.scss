@@ -6,36 +6,12 @@ h4,
 h5,
 h6 {
 	margin: 2rem 0 1rem;
-	//font-weight: lighter;
 	line-height: normal;
 	font-family: var(--font-atkinson-hyperlegible-next);
 	letter-spacing: -0.05em;
 	text-wrap: balance;
 }
 
-h1 {
-	font-size: clamp(2rem, 5vw + 1rem, var(--font-size-xxx-large));
-}
-
-h2 {
-	font-size: clamp(1.5rem, 4vw + 0.5rem, var(--font-size-xx-large));
-}
-
-h3 {
-	font-size: clamp(1.25rem, 3vw + 0.5rem, var(--font-size-x-large));
-}
-
-h4 {
-	font-size: clamp(1.125rem, 2vw + 0.5rem, var(--font-size-large));
-}
-
-h5 {
-	font-size: var(--font-size-medium);
-}
-
-h6 {
-	font-size: var(--font-size-small);
-}
 
 small {
 	color: var(--fg-muted-5);

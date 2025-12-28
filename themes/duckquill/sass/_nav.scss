@@ -1,17 +1,13 @@
 header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
   position: sticky;
   top: 1rem;
   z-index: 1000;
   margin: 4.25rem auto 1rem;
-  padding-bottom: 1rem;
-  width: calc(100% - 4rem);
-  max-width: var(--container-width);
+  padding: 1rem 0;
+  width: 100%;
+
+  // Frosted glass effect
   background: var(--bg-color);
-  //border-radius: 8px;
 
   &.nav-hidden {
     transform: translateY(-150%);
@@ -24,6 +20,18 @@ header {
 
   @media (prefers-reduced-motion: no-preference) {
     transition: transform 0.3s ease-in-out;
+  }
+
+  // Inner wrapper to constrain content width while background stays wider
+  .nav-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    //padding: 0 1rem;
+    width: 100%;
+    max-width: min(var(--container-width), 90%);
   }
 
   a {

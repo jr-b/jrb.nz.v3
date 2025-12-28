@@ -7,7 +7,7 @@ header {
   width: 100%;
 
   // Frosted glass effect
-  background: var(--bg-color);
+  //background: var(--bg-color);
 
   &.nav-hidden {
     transform: translateY(-150%);
@@ -29,17 +29,16 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    //padding: 0 1rem;
     width: 100%;
     max-width: min(var(--container-width), 90%);
   }
 
   a {
-    text-decoration: none;
+    font-weight: 400;
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration-style: wavy;
   }
 
   nav a {

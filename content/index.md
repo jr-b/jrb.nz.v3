@@ -4,7 +4,7 @@ const eleventyNavigation = {
 	order: 1
 };
 const title = "Home"
-const numberOfLatestPostsToShow = 6;
+const numberOfLatestPostsToShow = 10;
 ---
 
 # Hi! Salut!

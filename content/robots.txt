@@ -1,0 +1,7 @@
+---
+eleventyExcludeFromCollections: true
+permalink: /robots.txt
+layout: null
+---
+User-agent: *
+Disallow: /centris-scraper-privacy-policy/

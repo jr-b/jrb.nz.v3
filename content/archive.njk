@@ -1,12 +1,14 @@
 ---js
 const eleventyNavigation = {
 	key: "Archive",
-	order: 3
+	order: 5
 };
 const title = "Archive";
 
 ---
 <h1>Archive</h1>
+
+<p>All the content published on my blog.</p>
 
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

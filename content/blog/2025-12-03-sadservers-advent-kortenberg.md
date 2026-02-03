@@ -13,6 +13,9 @@ date: 2025-12-03
 
 ---
 
+<details>
+  <summary>Challenge details</summary>
+
 **Scenario:** "Kortenberg": Can't touch this!
 
 **Level:** Easy
@@ -33,6 +36,9 @@ date: 2025-12-03
 The "Check My Solution" button runs the script */home/admin/agent/check.sh*, which you can see and execute.
 
 **Time to Solve:** 15 minutes.
+
+</details>
+
 
 ---
 

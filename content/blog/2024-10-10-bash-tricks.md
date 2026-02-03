@@ -1,7 +1,6 @@
 ---
 title: "Bash with no letters"
 tags: [bash, ctf]
-draft: true
 date: 2024-10-10
 ---
 

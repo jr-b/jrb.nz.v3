@@ -10,7 +10,7 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--background-color: #edeff9;
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
@@ -350,4 +350,39 @@ footer {
 
 footer > p {
 	line-height: .7;
+}
+
+a:not(
+	[href^="#"],
+	[href^="/"],
+	[href*="localhost"],
+	[href*="jrb.nz"]
+)::after {
+	content: "↗";
+	font-size: xx-small;
+	display: inline-block;
+  	margin: 0 1px 0 1px;
+	opacity: .6;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details */
+details {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 0 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0 0.5em 0;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaaaaa;
+  margin-bottom: 0.5em;
 }

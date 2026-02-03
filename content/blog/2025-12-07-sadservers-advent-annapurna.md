@@ -8,12 +8,13 @@ date: 2025-12-07
 >
 > I'm doing each challenge every day and I'm publishing a quick write up for each one every day.
 >
-> 12-07: Docker attack surface
->
 > Spoiler alert! This gives the solution to the challenge.
 > If you want to do it on your own, stop reading.
 
 ---
+
+<details>
+  <summary>Challenge details</summary>
 
 **Scenario:** "Annapurna": High privileges
 
@@ -39,6 +40,9 @@ Save the content of _/root/mysecret.txt_ to the file _/home/admin/mysolution.txt
 The "Check My Solution" button runs the script _/home/admin/agent/check.sh_, which you can see and execute.
 
 **Time to Solve:** 20 minutes.
+
+</details>
+
 
 ---
 

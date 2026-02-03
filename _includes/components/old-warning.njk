@@ -1,0 +1,8 @@
+{# Used to add a warning for blog posts older than 2 years
+https://www.raymondcamden.com/2020/11/09/adding-a-warning-for-old-posts-to-your-jamstack-site #}
+{%- set age = date | ageInDays %}
+{%- set twoyears = 365 * 2 %}
+{%- if age > twoyears %}
+{% renderTemplate "md" %}> [!Warning] Old content warning
+> This post is more than 2 years old. It's content might be outdated. Please let me know if you find anything that needs to be fixed.{% endrenderTemplate %}
+{% endif %}

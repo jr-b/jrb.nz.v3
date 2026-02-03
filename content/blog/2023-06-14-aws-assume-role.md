@@ -28,8 +28,7 @@ Add these lines inside your `.zshrc`:
 
 Write the following to the file `~/.zfunctions/role-assume`
 
-````
-```zsh
+```bash
 #!/usr/bin/env zsh
 
 role-assume() {
@@ -52,16 +51,13 @@ role-assume() {
   echo "Trying 'aws sts get-caller-identity'"
   aws sts get-caller-identity | jq -r '.UserId'
 }
-````
-
 ```
 
 ### Testing
 
 Open a new shell. You should now be able to assume a role by passing the ARN to the function.
 
-```
-
+```bash
 # use granted `assume` cli app to get the initial credentials
 
 assume account-role-x
@@ -74,28 +70,23 @@ role-assume arn:aws:iam::role-y-other-account
 
 Trying 'aws sts get-caller-identity'
 ABCDREEEEWWWWKBKB:role-y-other-account
-
 ```
 
 The function is outputting the userId returned by `aws sts get-caller-identity` to confirm that we now have the new credentials.
 
 Obviously, the trust policy in the role you want to assume must allow the initial role/user to allow sts:AssumeRole. Such as:
 
-```
-
+```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Effect": "Allow",
-"Principal": {
-"AWS": "arn:aws:iam::111122223333:role/account-role-x"
-},
-"Action": "sts:AssumeRole"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::111122223333:role/account-role-x"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
 }
-]
-}
-
-```
-
 ```

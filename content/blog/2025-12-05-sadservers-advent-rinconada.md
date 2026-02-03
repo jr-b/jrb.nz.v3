@@ -8,12 +8,13 @@ date: 2025-12-05
 >
 > I'm doing each challenge every day and I'm publishing a quick write up for each one every day.
 >
-> 12-05: Restricted shell
->
 > Spoiler alert! This gives the solution to the challenge.
 > If you want to do it on your own, stop reading.
 
 ---
+
+<details>
+  <summary>Challenge details</summary>
 
 **Scenario:** "La Rinconada": Elevating privileges
 
@@ -38,6 +39,9 @@ Copy the content of _/root/secret.txt_ into the _/home/admin/solution.txt_ file,
 The "Check My Solution" button runs the script _/home/admin/agent/check.sh_, which you can see and execute.
 
 **Time to Solve:** 15 minutes.
+
+</details>
+
 
 ---
 

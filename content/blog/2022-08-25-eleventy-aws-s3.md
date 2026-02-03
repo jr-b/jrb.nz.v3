@@ -75,7 +75,7 @@ Here's what we need to give permissions for:
 3. Then click **Create policy**
 4. Use the following JSON for the S3 policy:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -101,7 +101,7 @@ Here's what we need to give permissions for:
 5. Click Next: Tags, then Next: Review, then give it a good name and click Create Policy.
 6. Next, we need to create a second policy for the cache invalidation in CloudFront. Do the same as before, but with the following JSON:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -150,7 +150,7 @@ This way, the AWS credentials won't be exposed in your GitHub Actions file, neit
 
 In your GitHub repo, go into the **Actions** tab. Click **New Workflow** and add the following:
 
-```
+```yaml
 name: Build and Deploy to S3
 on: [push]
 jobs:
@@ -244,10 +244,10 @@ That's it! I now have a live copy of this website on AWS S3. When I commit chang
 
 To complete this, I had some help from the following:
 
-- https://cri.dev/posts/2019-08-29-Deploy-Eleventy-site-with-Github-Actions-on-AWS-S3/
-- https://monicagranbois.com/blog/webdev/use-github-actions-to-deploy-11ty-site-to-s3/
-- https://florian.ec/blog/static-website-github-actions-s3-deploy/
-- https://boodyvo.hashnode.dev/deploy-a-static-website-on-aws-with-terraform
+- [https://cri.dev/posts/2019-08-29-Deploy-Eleventy-site-with-Github-Actions-on-AWS-S3/](https://cri.dev/posts/2019-08-29-Deploy-Eleventy-site-with-Github-Actions-on-AWS-S3/)
+- [https://monicagranbois.com/blog/webdev/use-github-actions-to-deploy-11ty-site-to-s3/](https://monicagranbois.com/blog/webdev/use-github-actions-to-deploy-11ty-site-to-s3/)
+- [https://florian.ec/blog/static-website-github-actions-s3-deploy/](https://florian.ec/blog/static-website-github-actions-s3-deploy/)
+- [https://boodyvo.hashnode.dev/deploy-a-static-website-on-aws-with-terraform](https://boodyvo.hashnode.dev/deploy-a-static-website-on-aws-with-terraform)
 
 The initial idea came from [this Reddit comment](https://www.reddit.com/r/devops/comments/wuetf4/comment/il9lry8/?utm_source=reddit&utm_medium=web2x&context=3).
 

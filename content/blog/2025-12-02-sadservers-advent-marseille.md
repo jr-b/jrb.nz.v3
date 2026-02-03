@@ -8,12 +8,13 @@ date: 2025-12-02
 >
 > I'm doing each challenge every day and I'm publishing a quick write up for each one every day.
 >
-> 12-02: LAMP stack configuration
->
 > Spoiler alert! This gives the solution to the challenge.
 > If you want to do it on your own, stop reading.
 
 ---
+
+<details>
+  <summary>Challenge details</summary>
 
 **Scenario:** "Marseille": Rocky security
 
@@ -38,6 +39,8 @@ The application should be able to serve the content from the webserver.
 The "Check My Solution" button runs the script _/home/admin/agent/check.sh_, which you can see and execute.
 
 **Time to Solve:** 15 minutes.
+
+</details>
 
 ---
 

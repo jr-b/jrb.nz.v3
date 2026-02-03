@@ -8,12 +8,13 @@ date: 2025-12-01
 >
 > I'm doing each challenge every day and I'm publishing a quick write up for each one every day.
 >
-> 12-01: Docker/nginx misconfiguration
->
 > Spoiler alert! This gives the solution to the challenge.
 > If you want to do it on your own, stop reading.
 
 ---
+
+<details>
+  <summary>Challenge details</summary>
 
 **Scenario:** "Auderghem": Containers miscommunication
 
@@ -41,6 +42,9 @@ curl http://localhost/2 returns HelloWorld;2
 The "Check My Solution" button runs the script */home/admin/agent/check.sh*, which you can see and execute.
 
 **Time to Solve:** 15 minutes.
+
+</details>
+
 
 ---
 

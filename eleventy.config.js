@@ -1,3 +1,4 @@
+import { RenderPlugin } from "@11ty/eleventy";
 import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -27,8 +28,8 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy({
 			"./public/": "/"
 		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
-
+		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl")
+		.addPassthroughCopy("**/*.txt");
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
@@ -55,6 +56,7 @@ export default async function(eleventyConfig) {
 	});
 
 	// Official plugins
+	eleventyConfig.addPlugin(RenderPlugin);
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 }
 	});
@@ -82,7 +84,7 @@ export default async function(eleventyConfig) {
 		metadata: {
 			language: "en",
 			title: "Jérémie Robi | jrb.nz",
-			subtitle: "",
+			subtitle: "Jérémie Robitaille is a cloud engineer based in Canada. He's interested in all things that make the internet what it is, from the infrastructure that runs it silently to the small and weird websites that keep it interesting.",
 			base: "https://jrb.nz/",
 			author: {
 				name: "Jérémie Robi"
@@ -112,6 +114,15 @@ export default async function(eleventyConfig) {
 	});
 
 	// Filters
+	// Used to add a warning for blog posts older than 2 years
+	// https://www.raymondcamden.com/2020/11/09/adding-a-warning-for-old-posts-to-your-jamstack-site
+	eleventyConfig.addFilter('ageInDays', d => {
+		let date = new Date(d);
+		let now = new Date();
+		let diff = now.getTime() - date.getTime();
+		let day_diff = Math.floor(diff / (1000 * 3600 * 24));
+		return day_diff;
+	});
 	eleventyConfig.addPlugin(pluginFilters);
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {

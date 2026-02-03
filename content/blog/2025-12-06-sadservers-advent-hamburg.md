@@ -8,12 +8,13 @@ date: 2025-12-06
 >
 > I'm doing each challenge every day and I'm publishing a quick write up for each one every day.
 >
-> 12-06: JQ filtering
->
 > Spoiler alert! This gives the solution to the challenge.
 > If you want to do it on your own, stop reading.
 
 ---
+
+<details>
+  <summary>Challenge details</summary>
 
 **Scenario:** "Hamburg": Find the AWS EC2 volume
 
@@ -33,6 +34,8 @@ The "Check My Solution" button runs the script _/home/admin/agent/check.sh_, whi
 **OS:** Debian 13
 
 **Root (sudo) Access:** Yes
+
+</details>
 
 ---
 

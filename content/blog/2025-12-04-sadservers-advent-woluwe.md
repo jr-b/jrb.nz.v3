@@ -8,29 +8,32 @@ date: 2025-12-04
 >
 > I'm doing each challenge every day and I'm publishing a quick write up for each one every day.
 >
-> 12-04: Docker image history
->
 > Spoiler alert! This gives the solution to the challenge.
 > If you want to do it on your own, stop reading.
 
 ---
 
-**Scenario:** "Woluwe": Too many images
+<details>
+  <summary>Challenge details</summary>
 
-**Level:** Medium
+    **Scenario:** "Woluwe": Too many images
 
-**Description:** A pipeline created a lot of Docker images locally for a web app. All these images except for one contain a typo introduced by a developer: there's an incorrect image instruction to pipe "HelloWorld" to "index.htmlz" instead of using the correct "index.html"
-Find which image doesn't have the typo (and uses the correct "index.html"), tag this correct image as "prod" and then deploy it with docker run -d --name prod -p 3000:3000 prod so it responds correctly to HTTP requests on port :3000 instead of "404 Not Found".
+    **Level:** Medium
 
-**Test:** curl http://localhost:3000 should respond with HelloWorld;529
+    **Description:** A pipeline created a lot of Docker images locally for a web app. All these images except for one contain a typo introduced by a developer: there's an incorrect image instruction to pipe "HelloWorld" to "index.htmlz" instead of using the correct "index.html"
+    Find which image doesn't have the typo (and uses the correct "index.html"), tag this correct image as "prod" and then deploy it with docker run -d --name prod -p 3000:3000 prod so it responds correctly to HTTP requests on port :3000 instead of "404 Not Found".
 
-The "Check My Solution" button runs the script */home/admin/agent/check.sh*, which you can see and execute.
+    **Test:** curl http://localhost:3000 should respond with HelloWorld;529
 
-**Time to Solve:** 15 minutes.
+    The "Check My Solution" button runs the script */home/admin/agent/check.sh*, which you can see and execute.
 
-**OS:** Debian 13
+    **Time to Solve:** 15 minutes.
 
-**Root (sudo) Access:** Yes
+    **OS:** Debian 13
+
+    **Root (sudo) Access:** Yes
+</details>
+
 
 ---
 

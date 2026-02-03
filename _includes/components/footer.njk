@@ -1,17 +1,19 @@
+
+{% set footer_items = [{title: "RSS Feed", url: "/feed/feed.xml"}, {title: "HTML Sitemap", url: "/sitemap.xml"}, {title: "humans.txt", url: "/humans.txt"}, {title: "Colophon", url:"/colophon/"}] %}
+
 <footer>
+    <p>
+    {% for item in footer_items %}
+        <a href="{{ item.url}}">{{ item.title }}</a>{% if not loop.last %} - {% endif%}
+    {% endfor %}
+    </p>
     <p>
         Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
     </p>
     <p>
-    The content of this site is <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC-BY-SA-4.0</a>.
+    The content of this site is <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC-BY-SA-4.0</a>
     </p>
 
-    <p>
-    <a href="/">RSS feed</a>
-    <a href="/">HTML Sitemap</a>
-    <a href="/">humans.txt</a>
-    <a href="/colophon/">Colophon</a>
-    </p>
 
 </footer>
 <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->

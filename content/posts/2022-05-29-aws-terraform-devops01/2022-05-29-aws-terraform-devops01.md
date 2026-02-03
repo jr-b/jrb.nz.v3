@@ -1,5 +1,4 @@
 ---
-layout: post
 title: First steps with AWS, Terraform, Jenkins and Ansible
 description: Basic tutorial for Terraform, Jenkins and Ansible on AWS
 tags: [devops, terraform, ansible, aws]
@@ -11,7 +10,7 @@ date: 2021-07-29
 > All the code snippets are initially from Scotty Parlor. Check out his blog and [Youtube Channel](https://www.youtube.com/channel/UCIx6h8L9gYlOmy0l8Ux-x7Q/featured) for more great content!
 
 Here's what we'll be building (image is from [Scotty's blog post](https://www.scottyfullstack.com/blog/devops-01-aws-terraform-ansible-jenkins-and-docker/))
-![image](https://paradise-devs-media.s3.amazonaws.com/media/django-summernote/2020-02-13/3d4c1893-2a8a-4835-ac3f-fb117a5ce047.png)
+![image](./architecture.avif)
 
 ---
 
@@ -38,7 +37,7 @@ Here's what we'll be building (image is from [Scotty's blog post](https://www.sc
 
 ## Install necessary CLI tools
 
-```
+```bash
 brew install awscli aws-vault ansible terraform
 ```
 
@@ -46,7 +45,7 @@ brew install awscli aws-vault ansible terraform
 
 You then have to run a couple of commands to be able to authenticate with AWS from the command line:
 
-```
+```bash
 aws configure
 ```
 
@@ -54,13 +53,13 @@ You'll be asked to enter your AWS Access Key ID, Secret Access Key, Default regi
 
 Now run the `aws-vault` tool we installed to add the non-root account. On macOS, you'll be prompted to define a password to save the credentials.
 
-```
+```bash
 aws-vault add {name-of-your-non-root-user}
 ```
 
 All done, you can now successfully authenticate with AWS from the CLI. To validate that it is true, you can run the `exec` command of `aws-vault` to confirm it:
 
-```
+```bash
 aws-vault exec {name-of-your-non-root-user}
 ```
 
@@ -70,7 +69,7 @@ aws-vault exec {name-of-your-non-root-user}
 
 Make a folder where you'll keep your project files, and create the following `main.tf` file:
 
-```
+```terraform
 # Following this guide : https://www.scottyfullstack.com/blog/devops-01-aws-terraform-ansible-jenkins-and-docker/
 
 terraform {
@@ -201,7 +200,7 @@ We already installed Ansible with `brew` at the beginning. Let's dive into this 
 
 Ansible works with a hosts file, called the inventory file, where it looks for host on which to do the commands. The hosts file is structured like this:
 
-```
+```ansible
 [dbservers]
 db01.test.example.com
 db02.test.example.com
@@ -220,7 +219,7 @@ Lets' make a folder, and create our inventory file:
 
 Then we edit the `aws-hosts` with the following:
 
-```
+```ansible
 [docker-web-server]
 ec2-user@public_web_ip ansible_ssh_private_key_file=~/.ssh/yourKeyPair.pem
 
@@ -232,7 +231,7 @@ So now, when we'll reference `jenkins` or `docker-web-server` in our Ansible pla
 
 We'll now work on our playbook for Jenkins with the file `provision-jenkins.yml`:
 
-```
+```yaml
 ---
 - name: Configure Jenkins Server
   hosts: jenkins
@@ -271,7 +270,7 @@ If you've done everything right up to here, you should have Jenkins running on t
 
 Now we can do the same for the other instance with the new file `provision-webserver.yml`
 
-```
+```yaml
 ---
 - name: Provision Web Servers
   hosts: webservers
@@ -329,14 +328,14 @@ Make a new `docker` folder with three files:
 
 We need to define the `requirements.txt` of our Python app:
 
-```
+```bash
 falcon==2.0.0
 gunicorn==19.9.0
 ```
 
 The Python app itself is quite simple `hello.py`:
 
-```
+```python
 import falcon
 
 class HelloResource(object):
@@ -361,7 +360,7 @@ app.add_route('/page2', page2)
 
 Finally, we need a file to tell Docker how to build our container. That's our `dockerfile`
 
-```
+```docker
 FROM python:3
 
 RUN pip install --upgrade pip

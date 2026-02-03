@@ -83,9 +83,10 @@ Dans le projet Eleventy, le dossier `_data` contient tous les fichiers Javascrip
 
 Je peux ensuite appeler les données d'une section dans un template Nunjucks en utilisant une boucle comme ceci:
 
-{% raw %}
+```json{% raw %}
 {% for newsstories in economie %} ... {% endfor %}
 {% endraw %}
+```
 
 ### Fréquence de mise à jour
 
@@ -107,7 +108,7 @@ Environ 1 mois après avoir fait le transfert du domaine chez Cloudflare, voyons
 
 Entre début janvier et début février, Cloudflare rapporte 1630 visites uniques. Quotidiennement, il y a eu au moins 71 visites sur le site, et au plus 180.
 
-![statistiques-rc-lite](/images/stats-rc-lite-8fev.png)
+![statistiques-rc-lite](./stats-rc-lite-8fev.png)
 
 Il faut signaler que je n'ai pas vraiment fait de publicité pour le site. J'ai ajouté le projet sur https://250kb.club, https://512kb.club et https://1mb.club, qui sont des listes de sites web légers.
 
@@ -128,9 +129,9 @@ Un [internaute](https://hugo.soucy.cc) m'a aussi contacté (via une `issue` sur 
 En date du 16 juin 2023, le site reçoit en moyenne 600 visiteurs uniques par jour. Sur un mois, c'est environ 7000 visiteurs uniques, et environ 100 000 requêtes faites sur le nom de domaine.
 
 _Requêtes reçues par Cloudflare dans les 30 derniers jours._
-![statistiques-rc-lite](/images/rad-can-mini-16-juin2023-requests.png)
+![statistiques-rc-lite](./rad-can-mini-16-juin2023-requests.png)
 
 _Visiteurs uniques rapportés par Cloudflare dans les 30 derniers jours._
-![statistiques-rc-lite](/images/rad-can-mini-uniq-16juin2023.png)
+![statistiques-rc-lite](./rad-can-mini-uniq-16juin2023.png)
 
 [^1]: Rapport _En attente de connexion_: [consulter les principales constatations](https://www.rapports-cac.ca/wp-content/uploads/2021/10/2021-10-26-HTSN-1P-FRE-FINAL-1.pdf)

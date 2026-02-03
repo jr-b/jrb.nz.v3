@@ -11,9 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          pwd
-          ls -alh
-          cd jrb.nz.v3 || exit
+          # pwd
+          # ls -alh
           npm run build
       - uses: untitaker/hyperlink@0.2.0
         with:

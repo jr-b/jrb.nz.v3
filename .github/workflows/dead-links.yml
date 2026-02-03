@@ -10,4 +10,11 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: AlexanderDokuchaev/md-dead-link-check@5b5641a92ec95d13a5b04927e0e11de5c3405298 # v1.3.0
+      - run: |
+          pwd
+          ls -alh
+          cd jrb.nz.v3 || exit
+          npm run build
+      - uses: untitaker/hyperlink@0.2.0
+        with:
+          args: _site/ --check-anchors

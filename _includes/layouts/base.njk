@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	{% include "../components/head.njk" %}
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link logo">
+				{% include "../components/logo.njk" %}
+				{% include "../components/nav.njk" %}
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				{{ content | safe }}
+			</heading-anchors>
+		</main>
+
+		{% include "../components/footer.njk" %}
+
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+	</body>
+</html>

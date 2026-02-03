@@ -1,0 +1,11 @@
+---
+layout: /layouts/base.njk
+---
+<article class="h-entry">
+  <div class="e-content p-name">
+	<h1><a class="u-url" href="{{ page.url }}">{{ title }}</a></h1>
+	{{ description }}
+	{% if cover %}<img src="{{ cover }}" alt="{{ cover_alt }}">{% endif %}
+	{{ content | safe }}
+  </div>
+</article>

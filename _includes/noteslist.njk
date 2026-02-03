@@ -1,0 +1,8 @@
+<ul reversed class="notelist" style="--notelist-index: {{ (noteslistCounter or noteslist.length) + 1 }}">
+{%- for note in noteslist | reverse %}
+	<li class="notelist-item{% if note.url == url %} notelist-item-active{% endif %}">
+		<a href="{{ note.data.externalLink }}" class="notelist-link">{% if note.data.title %}{{ note.data.title }}{% else %}<code>{{ note.url }}</code>{% endif %}</a>
+        <p>{{ note.data.linkDescription | safe }}</p>
+	</li>
+{%- endfor %}
+</ul>

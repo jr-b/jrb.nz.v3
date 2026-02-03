@@ -1,0 +1,11 @@
+---js
+const eleventyNavigation = {
+	key: "Links",
+	order: 5
+};
+const title = "Links";
+---
+<h1>Links</h1>
+
+{% set noteslist = collections.links %}
+{% include "noteslist.njk" %}

@@ -6,7 +6,7 @@ date: 2022-02-11
 
 Je fais la gestion DNS de mes projets sur Cloudflare. J'ai eu quelques pépins techniques en configurant mes noms de domaine avec des projets hébergés chez Vercel. Je recevais quotidiennement des courriels de Vercel me signalant que la configuration DNS de mes projets était incorrecte. Je me suis penché sur le problème pour tenter de trouver une solution.
 
-![vercel-not-configured](/images/vercel-not-configured.png)
+![vercel-not-configured](./vercel-not-configured.png)
 
 Vercel annonce d'emblée dans sa [documentation](https://vercel.com/support/articles/using-cloudflare-with-vercel) qu'ils ne recommandent pas l'utilisation du proxy Cloudflare:
 
@@ -41,6 +41,6 @@ On peut confirmer que la nouvelle configuration fonctionne avec la commande suiv
 `curl http://example.com/.well-known/acme-challenge -I`
 
 L'interface de Vercel se met rapidement à jour quand la configuration est tip top 🎉
-![vercel-configured](/images/vercel-configured.png)
+![vercel-configured](./vercel-configured.png)
 
 [^1]: https://vercel.com/support/articles/using-cloudflare-with-vercel

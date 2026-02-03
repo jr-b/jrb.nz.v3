@@ -1,7 +1,7 @@
 ---
 title: "Radio-Canada Mini"
-date: 2022-10-24
-tags: 'macos'
+date: 2021-10-28
+tags: 'web, news'
 ---
 
-Test project!
+WIP

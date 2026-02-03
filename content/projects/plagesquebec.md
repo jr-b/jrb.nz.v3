@@ -1,7 +1,7 @@
 ---
 title: "plagesquebec.com"
-date: 2025-10-24
-tags: 'macos'
+date: 2024-07-22
+tags: 'outdoor'
 ---
 
-Test project!
+WIP

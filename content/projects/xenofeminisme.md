@@ -1,8 +1,7 @@
 ---
 title: "Zine: Manifeste Xénoféministe"
-date: 2025-10-24
+date: 2023-07-29
 tags: 'zine'
-projectDescription: "test description"
 ---
 
-Test project!
+WIP. https://github.com/jr-b/xenofeminism-manifesto-fr

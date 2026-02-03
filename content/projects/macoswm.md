@@ -1,8 +1,8 @@
 ---
 title: "macoswm.com"
-date: 2025-10-24
+date: 2025-12-04
 tags: 'macos'
-projectDescription: "test description"
+projectDescription: "macOS window managers directory"
 ---
 
-Test project!
+WIP

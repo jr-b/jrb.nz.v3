@@ -386,3 +386,8 @@ details[open] summary {
   border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
+
+.project-description {
+	flex-basis: 100%;
+	margin-top: 0px;
+}

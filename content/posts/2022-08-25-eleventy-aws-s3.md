@@ -11,7 +11,7 @@ As you may know, this website is built using [Eleventy](https://11ty.dev), a sta
 
 **The goal here is to manually do the part that Vercel does for me: host the website in a AWS S3 bucket, automate the build/deploy pipeline with GitHub Actions, and add CloudFront as the CDN on top of it.**
 
-I'll explain how to proceed with the AWS Management Console, and then (eventully) link to the IaC Terraform files at the end.
+I'll explain how to proceed with the AWS Management Console, and then (eventually) link to the IaC Terraform files at the end.
 
 ## Create a S3 bucket for webhosting
 
@@ -202,7 +202,7 @@ The last step is to add CloudFront as the CDN on top of the S3 bucket. For this,
 
 1. Go into the AWS CloudFront section, and click Create distribution
 2. As the Origin domain, you need to enter your S3 URL (without the http/https)
-3. All the other defaults parameters works for us, leave them as is.
+3. All the other default parameters work for us, leave them as is.
 4. Click Create Distribution, and wait for it to be created in AWS.
 
 You could stop here if you wanted. Using the CloudFront default domain name, you can then have access to your site! But I wanted to go a step further and a my own domain name.

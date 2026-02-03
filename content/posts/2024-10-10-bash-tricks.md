@@ -4,7 +4,7 @@ tags: [bash, ctf]
 date: 2024-10-10
 ---
 
-I recently did a challenge on PicoCTF (`U2Fuc0FscGhhCg` 🐶) and I had to explore some bash trickery to solve it. I learned a few that are worth noting here for future me or future you.
+I recently did a challenge on PicoCTF (`U2Fuc0FscGhhCg` 🐶) and I had to explore some bash trickery to solve it. I learned a few tricks that are worth noting here for future me or future you.
 
 The challenge starts in a limited shell in which you can only enter numbers and _some_ special characters.
 
@@ -73,7 +73,7 @@ Try '/bin/base64 --help' for more information.
 
 To make this work, we would need something more specific since we're matching more than one binary. But it could work.
 
-An even easier way is to use only path exapansion and wildcards.
+An even easier way is to use only path expansion and wildcards.
 
 I noticed `~` was working as expected:
 

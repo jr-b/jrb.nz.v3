@@ -39,7 +39,7 @@ D’ailleurs, plusieurs autres projets similaires existent ailleurs sur le web:
 
 ## Quelle est la pertinence d’un site de ce genre en 2022?
 
-Avec la montée fulgurante des nouvelles technologies du web et des réseaux sociaux, avec la centralisation excessive des services vers les <abbr title="Google, Apple, Facebook, Amazon, Microsoft">GAFAM</abbr>, on pourrait croire que des sites légers (qui consomment peu de données) tels que [CBC Lite](https://cbc.ca/lite) sont maintenat désuets, inutiles. Qu’ils seraient des artéfacts du web d’avant, du petit web.
+Avec la montée fulgurante des nouvelles technologies du web et des réseaux sociaux, avec la centralisation excessive des services vers les <abbr title="Google, Apple, Facebook, Amazon, Microsoft">GAFAM</abbr>, on pourrait croire que des sites légers (qui consomment peu de données) tels que [CBC Lite](https://cbc.ca/lite) sont maintenant désuets, inutiles. Qu’ils seraient des artéfacts du web d’avant, du petit web.
 
 Il faut par contre rappeler que l’accès à Internet est un privilège, tout autant que l’accès à une connexion Internet de qualité. Dans un rapport publié en 2019, le <abbr title="Conseil des académies canadiennes">CAC</abbr> constatait l’écart de connectivité à travers le Canada:
 
@@ -133,4 +133,4 @@ _Requêtes reçues par Cloudflare dans les 30 derniers jours._
 _Visiteurs uniques rapportés par Cloudflare dans les 30 derniers jours._
 ![statistiques-rc-lite](/images/rad-can-mini-uniq-16juin2023.png)
 
-[^1]: Rapport _En attente de connexion_: [consulter les principales constations](https://www.rapports-cac.ca/wp-content/uploads/2021/10/2021-10-26-HTSN-1P-FRE-FINAL-1.pdf)
+[^1]: Rapport _En attente de connexion_: [consulter les principales constatations](https://www.rapports-cac.ca/wp-content/uploads/2021/10/2021-10-26-HTSN-1P-FRE-FINAL-1.pdf)

@@ -4,7 +4,7 @@ tags: [macos, firefox]
 date: 2020-07-09
 ---
 
-> As of 2022, this is not the set-up I'm using anymore. I've moved to an hybrid solution, where I'm switching between Safari and Chrome on a daily basis depeding what work needs to be done.
+> As of 2022, this is not the set-up I'm using anymore. I've moved to an hybrid solution, where I'm switching between Safari and Chrome on a daily basis depending what work needs to be done.
 
 Since the end of uBlock Origin on Safari, I've been using Firefox as my main browser. Here's how I'm setting it up so it's nice and fast.
 
@@ -18,11 +18,11 @@ This type of theme is installed by adding a userChrome.css file to your Firefox 
 
 I'm running a [Whoogle](https://github.com/benbusby/whoogle-search) instance on Heroku. To set it up as a search engine in Firefox, you only need to visit your Whoogle URL and then click "Add Search Engine" (the three dots button in the URL bar). You can then select Whoogle in the Firefox settings.
 
-Since Whoogle replace Google, you can unselect Google as one of the alternate search engines. I still keep DuckDuckGo and Wikipeadia.
+Since Whoogle replace Google, you can unselect Google as one of the alternate search engines. I still keep DuckDuckGo and Wikipedia.
 
 ## Extensions
 
-- **uBlock Origin** - truly the best extension to control what's loaded on a page. Litteraly can't browse the web without this one.
+- **uBlock Origin** - truly the best extension to control what's loaded on a page. Literally can't browse the web without this one.
 - **Are.na** - Are.na extension to add blocks to your channels.
 - **Firefox Multi-Account Containers**
 - **Web Archives** - Allows to search for cached content (Google, Bing, etc.) or to query the Wayback Machine with an URL (still new to this extension).

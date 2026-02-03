@@ -8,11 +8,11 @@ Je fais la gestion DNS de mes projets sur Cloudflare. J'ai eu quelques pépins t
 
 ![vercel-not-configured](/images/vercel-not-configured.png)
 
-Vercel annonce d'emblé dans sa [documentation](https://vercel.com/support/articles/using-cloudflare-with-vercel) qu'ils ne recommandent pas l'utilisation du proxy Cloudflare:
+Vercel annonce d'emblée dans sa [documentation](https://vercel.com/support/articles/using-cloudflare-with-vercel) qu'ils ne recommandent pas l'utilisation du proxy Cloudflare:
 
 > It is highly recommended that you don't use the Cloudflare CDN with Vercel. [^1]
 
-Si on veut quand même utiliser le proxy Cloudflare, Vercel indique qu'on doit permettre les requête HTTP (sans SSL) sur le path `/.well-known/*`.
+Si on veut quand même utiliser le proxy Cloudflare, Vercel indique qu'on doit permettre les requêtes HTTP (sans SSL) sur le path `/.well-known/*`.
 
 ## Désactiver HTTPS pour `.well-known`
 

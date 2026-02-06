@@ -1,16 +1,18 @@
+Personal website, built using Eleventy.
+
+## Fonts
+
 * Font: https://fonts.google.com/specimen/Bricolage+Grotesque
 * Font alt: https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next
 
-Inspiration
+## Inspiration
 
-* https://karnbianco.co.uk/projects/
-* https://github.com/Spydarlee/karnbianco.co.uk/blob/master/eleventy.config.js
-* https://rknight.me/blog/automating-my-now-page/
-* https://github.com/rknightuk/rknight.me/blob/master/.eleventy.js
-* https://luke.hsiao.dev/blog/planning/
-* https://www.zachleat.com/web/line-numbers/
+* https://karnbianco.co.uk/
+* https://rknight.me/
+* https://luke.hsiao.dev/
+* https://www.zachleat.com/
 * https://eva.town/
-* https://jzhao.xyz/posts/agentic-computing
-* https://l.prry.uk/articles/2025-12-31-the-indieweb-in-2030/
+* https://jzhao.xyz/
+* https://l.prry.uk/
 * https://harrycresswell.com/
 * https://lukealexdavis.co.uk/

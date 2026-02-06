@@ -13,11 +13,11 @@ I'm Jérémie. You've reached my personal website, where I write about stuff I d
 
 I'm hoping this place can be a [digital garden](https://maggieappleton.com/garden-history). A kind of space where I work and think with the [garage door up](https://notes.andymatuschak.org/zCMhncA1iSE74MKKYQS5PBZ). You might find some content here written in French since this is my native language, but it should mostly be English.
 
-Even though I have a background in cinema and literature, this website is very *geeky* and concerned with technical subjects in the [IT field](https://en.wikipedia.org/wiki/Information_technology).
+Even though I have a background in cinema and literature, this website is very *geeky* and concerned with technical subjects in the digital world; mainly: cloud computing and devOps practices, python, security and capture the flag (CTF) challenges.
 
-These past years, I've built a few projects for me and others. You can read about them in [/projects](/projects) if you'd like.
+These past years, I've built a few projects for me and others. You can read about them in [/projects](/projects).
 
-I'm currently working as a Cloud/DevOps Engineer. You can learn more about me in [/about](/about) or read my resume in [/cv](/cv).
+I'm currently working as a Cloud/DevOps Engineer.
 
 📍 Based in Montréal, Qc.
 

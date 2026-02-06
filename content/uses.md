@@ -4,7 +4,7 @@ title: "Uses"
 
 <h1>Uses</h1>
 
-Following the `/uses` trend, this is a page to track what I use daily. You can see other `/uses` pages at [uses.tech](https://uses.tech) or interviews at [usesthis.com](https://usesthis.com).
+This is a page to track what I use daily. You can see other `/uses` pages at [uses.tech](https://uses.tech) or interviews at [usesthis.com](https://usesthis.com).
 
 ## Office
 
@@ -22,7 +22,8 @@ Following the `/uses` trend, this is a page to track what I use daily. You can s
 - Work: [Macbook Pro 16" 2024](https://support.apple.com/en-us/121554) (M4 Pro, 48 GB)
 - Personal: [Macbook Pro 14" 2021](https://support.apple.com/en-us/111902) (M1 Pro, 16 GB, 1 TB)
 - Homelab:
-  - Proxmox VE: [Lenovo M720q](https://www.lenovo.com/ca/en/p/desktops/thinkcentre/m-series-tiny/thinkcentre-m720q/11tc1mtm72q) (i3-8100T, 32 GB, 1 TB)
+  - First Proxmox VE: [Lenovo M720q](https://www.lenovo.com/ca/en/p/desktops/thinkcentre/m-series-tiny/thinkcentre-m720q/11tc1mtm72q) (i3-8100T, 32 GB, 1 TB)
+  - Second Proxmox VE: [Lenovo m90q Gen 3](https://www.lenovo.com/ca/en/p/desktops/thinkcentre/m-series-tiny/thinkcentre-m90q-gen-3-tiny-intel/len102c0021) (i5-12500T, 16 GB, 512 GB)
   - Proxmox Backup Server: [HP EliteDesk 705 G3 Mini](https://support.hp.com/us-en/product/product-specs/hp-elitedesk-705-g3-desktop-mini-pc/10669600) (AMD PRO A6-8570E R5, 16 GB, 2 TB)
   - [Mac Mini M1](https://support.apple.com/en-us/111894)
   - [Raspberry Pi 3 B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
@@ -30,7 +31,7 @@ Following the `/uses` trend, this is a page to track what I use daily. You can s
 ## Monitors
 
 - [HP Z27 27" 4K UHD LED](https://support.hp.com/ca-en/product/details/hp-z27-27-inch-4k-uhd-display/model/19887831)
-- HP 4k
+- [HP 27f 4k](https://support.hp.com/ca-en/product/details/hp-value-27-inch-displays/model/28012479)
 
 ## Peripherals
 
@@ -38,3 +39,4 @@ Following the `/uses` trend, this is a page to track what I use daily. You can s
 - Mouse: [Logitech G Pro Wireless mouse](https://www.logitechg.com/en-ca/shop/p/pro-wireless-mouse)
 - Phone: [iPhone 17 Pro 256 GB](https://www.apple.com/ca/iphone-17-pro/)
 - Tablet: [iPad Pro 11"](https://support.apple.com/en-us/111897)
+- Meeting headset: [Jabra Evolve2 55](https://www.jabra.com/en-ca/business/office-headsets/jabra-evolve/jabra-evolve2-55)

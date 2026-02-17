@@ -5,8 +5,12 @@ date: 2022-01-10
 tags: [projets, Radio-Canada Mini, web]
 ---
 
-> En 2021, j’ai découvert la version _lite_ de CBC.ca, disponible à la page https://cbc.ca/lite. Je me suis lancé le défi de créer une version équivalente pour le contenu de Radio-Canada.ca.<br>
-> Le projet est en ligne depuis 2021 → https://radiocanadamini.ca<br>
+> [!Important]
+>  Ce projet a reçu une [notice de retrait DMCA en juin 2024](https://github.com/github/dmca/blob/d6ec9201221fd1a73d938f333254c89a1b6e8aa0/2024/06/2024-06-05-radio-canada.md?plain=1#L23). Je savais que ce projet était voué à se terminer ainsi. Malgré tout, les échanges et les apprentissages que le projet a générés ont valu la peine! Tous les URLs vers le site pointent maintenant vers la page archivée dans la Wayback Machine.
+
+
+> En 2021, j’ai découvert la version _lite_ de CBC.ca, disponible à la page [https://cbc.ca/lite](https://cbc.ca/lite). Je me suis lancé le défi de créer une version équivalente pour le contenu de Radio-Canada.ca.<br>
+> Le projet est resté en ligne de 2021 à juin 2024 à l'adresse: [https://radiocanadamini.ca](https://web.archive.org/web/20240601115720/https://radiocanadamini.ca/)<br>
 > Cet article présente le projet et fait un survol de quelques détails techniques.
 
 ## Pourquoi faire ce site?
@@ -55,7 +59,7 @@ Outre les points déjà mentionnés, voici d'autres aspects qui donnent de la pe
 
 - **Sans publicités**: Aucune publicité n’est ajoutée au site. Radio-Canada Mini ne rapporte aucun revenu.
 
-- **Respect de la vie privée**: Aucun _trackers_, aucun _cookies_. Le site ne récupère aucune information sur votre navigateur et votre configuration. La seule métrie qui est utilisée est celle disponible via Cloudflare (les statistiques de requêtes DNS).
+- **Respect de la vie privée**: Aucun _trackers_, aucun _cookies_. Le site ne récupère aucune information sur votre navigateur et votre configuration. La seule métrique qui est utilisée est celle disponible via Cloudflare (les statistiques de requêtes DNS).
 
 - **Faible consommation de données**: La page d’accueil de Radio-Canada.ca fait 3200 kb (3.2 MB), alors que Radio-Canada Mini et la plupart de ses pages font moins de 20 kb. _Environ 160 fois moins de données sont consommées en visitant Radio-Canada Mini._
 
@@ -83,7 +87,7 @@ Dans le projet Eleventy, le dossier `_data` contient tous les fichiers Javascrip
 
 Je peux ensuite appeler les données d'une section dans un template Nunjucks en utilisant une boucle comme ceci:
 
-```json{% raw %}
+```nunjucks{% raw %}
 {% for newsstories in economie %} ... {% endfor %}
 {% endraw %}
 ```
@@ -134,4 +138,21 @@ _Requêtes reçues par Cloudflare dans les 30 derniers jours._
 _Visiteurs uniques rapportés par Cloudflare dans les 30 derniers jours._
 ![statistiques-rc-lite](./rad-can-mini-uniq-16juin2023.png)
 
+## Mise à jour : juin 2024
+
+[Le projet a reçu un avis de retrait DMCA le 5 juin 2024](https://github.com/github/dmca/blob/d6ec9201221fd1a73d938f333254c89a1b6e8aa0/2024/06/2024-06-05-radio-canada.md?plain=1#L23).
+
+En me lançant dans le projet, je savais que ça finirait avec ce genre de situation. Après tout, je réutilisais/reproduisais du contenu qui ne m'appartenait pas. Je n'avais pas vraiment de recours face à ça.
+
+Un des soucis importants que je créais avec radiocanadamini.ca, c'était la question du contrôle sur le contenu publié et sa disponibilité. Certains contenus publiés par Radio-Canada/CBC doivent être rapidement retirés du web dans certains contextes, notamment judiciaire.
+
+Mon projet ne supportait pas la dépublication d'un article précédemment publié. Si un article était disponible au moment du build, la page HTML restait visible dans le dépot de code du site, peu importe ce qui advenait du texte par après à la source.
+
+J'ai exploré l'idée de refactor le projet et de charger les pages seulement quand elles sont demandées, et ce directement à partir de l'API source. J'aurais donc évité de conserver du contenu qui ne devait pas l'être dans ce genre de situation.
+
+Vu les enjeux légaux du projet, j'ai laissé tomber.
+
+On peut consulter le site sur la Wayback Machine: [https://web.archive.org/web/20240601115720/https://radiocanadamini.ca/](https://web.archive.org/web/20240601115720/https://radiocanadamini.ca/)
+
 [^1]: Rapport _En attente de connexion_: [consulter les principales constatations](https://www.rapports-cac.ca/wp-content/uploads/2021/10/2021-10-26-HTSN-1P-FRE-FINAL-1.pdf)
+

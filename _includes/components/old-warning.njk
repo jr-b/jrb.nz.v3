@@ -4,5 +4,5 @@ https://www.raymondcamden.com/2020/11/09/adding-a-warning-for-old-posts-to-your-
 {%- set twoyears = 365 * 2 %}
 {%- if age > twoyears %}
 {% renderTemplate "md" %}> [!Warning] Old content warning
-> This post is more than 2 years old. It's content might be outdated. Please let me know if you find anything that needs to be fixed.{% endrenderTemplate %}
+> This post is more than 2 years old. It's content might be outdated. Please let me know if you find anything that needs to be fixed: [email@me here](https://letterbird.co/jrb).{% endrenderTemplate %}
 {% endif %}

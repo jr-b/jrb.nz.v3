@@ -4,6 +4,9 @@ tags: [aws, script, cli, web]
 date: 2023-06-14
 ---
 
+> [!Note]
+>  The Granted CLI [added](https://github.com/fwdcloudsec/granted/pull/527) the `--chain` flag a few months after publishing this, offering a cleaner solution to what I was doing with this script.
+
 Working in AWS, I sometimes need to test a role to debug some issues or validate some hypotheses.
 
 I'm already using the [Granted CLI](https://github.com/common-fate/granted) to assume federated roles in the AWS accounts I have access to, but it doesn't let me quickly change role (either in the same AWS account or in another one).
@@ -74,7 +77,7 @@ ABCDREEEEWWWWKBKB:role-y-other-account
 
 The function is outputting the userId returned by `aws sts get-caller-identity` to confirm that we now have the new credentials.
 
-Obviously, the trust policy in the role you want to assume must allow the initial role/user to allow sts:AssumeRole. Such as:
+Obviously, the trust policy in the role you want to assume must allow the initial role/user to perform sts:AssumeRole. Such as:
 
 ```json
 {

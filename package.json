@@ -50,6 +50,7 @@
 		"zod-validation-error": "^3.5.2"
 	},
 	"dependencies": {
+		"@kevingimbel/eleventy-plugin-mermaid": "^3.0.1",
 		"@zachleat/heading-anchors": "^1.0.5"
 	}
 }

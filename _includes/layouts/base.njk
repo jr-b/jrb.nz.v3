@@ -19,5 +19,13 @@
 		{% include "../components/footer.njk" %}
 
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+
+		{# Only load mermaid if instructed to do so in the post's front matter. #}
+    	{% if mermaid %}
+      		<script type="module" async eleventy:ignore>
+      			import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      			document.addEventListener('DOMContentLoaded', () => mermaid.initialize({ startOnLoad: true }));
+      		</script>
+    	{% endif %}
 	</body>
 </html>

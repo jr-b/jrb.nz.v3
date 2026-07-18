@@ -1,0 +1,13 @@
+{% macro toc(content) %}
+{%- set headings = content | extractHeadings -%}
+{%- if headings.length > 1 -%}
+<nav class="toc" aria-label="Table of contents">
+	<p class="toc-title">Contents</p>
+	<ul>
+		{%- for heading in headings %}
+		<li class="toc-item toc-level-{{ heading.level }}"><a href="#{{ heading.id }}">{{ heading.text }}</a></li>
+		{%- endfor %}
+	</ul>
+</nav>
+{%- endif -%}
+{% endmacro %}

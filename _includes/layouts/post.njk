@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
+{%- import "macros/content.njk" as macros -%}
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
@@ -15,6 +16,8 @@ layout: layouts/base.njk
 </ul>
 
 {% include "../components/old-warning.njk" %}
+
+{% if toc %}{{ macros.toc(content) }}{% endif %}
 
 {{ content | safe }}
 

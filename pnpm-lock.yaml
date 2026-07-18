@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@kevingimbel/eleventy-plugin-mermaid':
+        specifier: ^3.0.1
+        version: 3.0.1
       '@zachleat/heading-anchors':
         specifier: ^1.0.5
         version: 1.0.5
@@ -226,6 +229,9 @@ packages:
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     cpu: [x64]
     os: [win32]
+
+  '@kevingimbel/eleventy-plugin-mermaid@3.0.1':
+    resolution: {integrity: sha512-p++zth8mdVroiZp5vspqU9KCNC81shKRgr2Vf8+3kAbcmJHZU+SFnTthsqwTI+R6R3K79JmCBBScIKWkUyEivA==}
 
   '@rgrove/parse-xml@4.2.0':
     resolution: {integrity: sha512-UuBOt7BOsKVOkFXRe4Ypd/lADuNIfqJXv8GvHqtXaTYXPPKkj2nS2zPllVsrtRjcomDhIJVBnZwfmlI222WH8g==}
@@ -489,6 +495,10 @@ packages:
   gray-matter@4.0.3:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
+
+  he@1.2.0:
+    resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
+    hasBin: true
 
   htmlparser2@7.2.0:
     resolution: {integrity: sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==}
@@ -1067,6 +1077,10 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
+  '@kevingimbel/eleventy-plugin-mermaid@3.0.1':
+    dependencies:
+      he: 1.2.0
+
   '@rgrove/parse-xml@4.2.0': {}
 
   '@sindresorhus/slugify@2.2.1':
@@ -1294,6 +1308,8 @@ snapshots:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
+
+  he@1.2.0: {}
 
   htmlparser2@7.2.0:
     dependencies:

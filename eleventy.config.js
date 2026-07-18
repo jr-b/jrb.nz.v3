@@ -6,20 +6,27 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import MarkdownItFootnote from 'markdown-it-footnote';
 import MarkdownItGitHubAlerts from 'markdown-it-github-alerts';
+import pluginMermaid from "@kevingimbel/eleventy-plugin-mermaid";
 
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if (data.draft) {
 			data.title = `${data.title} (draft)`;
 		}
 
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
+	});
+
+	// inject macros globally to markdowns files
+	// macros can be used like this: `macros.macroName()`
+	eleventyConfig.addPreprocessor("macro-inject", ".njk,.md", (data, content) => {
+		return `{%- import "macros/content.njk" as macros with context -%}\n` + content;
 	});
 
 	// Copy the contents of the `public` folder to the output folder
@@ -59,16 +66,18 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 }
 	});
+
+	eleventyConfig.addPlugin(pluginMermaid);
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
-// Markdown
+	// Markdown
 	eleventyConfig.amendLibrary("md", (mdLib) => mdLib
-	.use(MarkdownItGitHubAlerts,{
-  		markers: '*'
-	})
-	.use(MarkdownItFootnote)
+		.use(MarkdownItGitHubAlerts, {
+			markers: '*'
+		})
+		.use(MarkdownItFootnote)
 	);
 
 	eleventyConfig.addPlugin(feedPlugin, {
@@ -122,6 +131,48 @@ export default async function(eleventyConfig) {
 		let day_diff = Math.floor(diff / (1000 * 3600 * 24));
 		return day_diff;
 	});
+
+	// Add a filter to extract headings for the TOC macro (see macros/content.njk)
+	eleventyConfig.addFilter("extractHeadings", function (content) {
+		if (!content) return [];
+
+		// Note: `content` here is the page's own rendered HTML, before the site-wide
+		// IdAttributePlugin transform runs, so headings don't have `id` attributes yet.
+		// We compute the same id it will assign later (slugified heading text, with
+		// `-2`, `-3`, ... suffixes on repeats) so TOC links match the final anchors.
+		const slugify = eleventyConfig.getFilter("slugify");
+		const headingRegex = /<h([2-3])[^>]*>(.*?)<\/h\1>/gi;
+		const headings = [];
+		const seenIds = {};
+		let match;
+
+		while ((match = headingRegex.exec(content)) !== null) {
+			const text = match[2]
+				.replace(/<[^>]+>/g, '') // Strip HTML tags from heading text
+				.replace(/&amp;/g, '&')
+				.replace(/&lt;/g, '<')
+				.replace(/&gt;/g, '>')
+				.replace(/&quot;/g, '"')
+				.replace(/&#0?39;/g, "'")
+				.trim();
+
+			let id = slugify(text);
+			if (seenIds[id]) {
+				id = `${id}-${++seenIds[id]}`;
+			} else {
+				seenIds[id] = 1;
+			}
+
+			headings.push({
+				level: parseInt(match[1]),
+				id,
+				text,
+			});
+		}
+
+		return headings;
+	});
+
 	eleventyConfig.addPlugin(pluginFilters);
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {

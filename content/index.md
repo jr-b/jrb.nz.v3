@@ -9,7 +9,7 @@ const numberOfLatestPostsToShow = 10;
 
 # Hi! Salut!
 
-I'm Jérémie. You've reached my personal website, where I write about stuff I do and learn.
+I'm Jérémi. You've reached my personal website, where I write about stuff I do and learn.
 
 I'm hoping this place can be a [digital garden](https://maggieappleton.com/garden-history). A kind of space where I work and think with the [garage door up](https://notes.andymatuschak.org/zCMhncA1iSE74MKKYQS5PBZ). You might find some content here written in French since this is my native language, but it should mostly be English.
 

@@ -91,11 +91,11 @@ export default async function (eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Jérémie Robi | jrb.nz",
-			subtitle: "Jérémie Robitaille is a cloud engineer based in Canada. He's interested in all things that make the internet what it is, from the infrastructure that runs it silently to the small and weird websites that keep it interesting.",
+			title: "Jérémi Robi | jrb.nz",
+			subtitle: "Jérémi Robitaille is a cloud engineer based in Canada. He's interested in all things that make the internet what it is, from the infrastructure that runs it silently to the small and weird websites that keep it interesting.",
 			base: "https://jrb.nz/",
 			author: {
-				name: "Jérémie Robi"
+				name: "Jérémi Robi"
 			}
 		}
 	});
@@ -183,6 +183,19 @@ export default async function (eleventyConfig) {
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
+	});
+
+	// humans.txt is served as `Content-Type: text/plain` with no charset, so browsers
+	// have to guess the encoding and can mangle accented characters (e.g. "é" -> "Ã©").
+	// A leading UTF-8 BOM makes browsers detect the encoding correctly regardless of
+	// what charset (if any) the host sends. Added as a transform, not in the template
+	// source, because Eleventy trims rendered output and JS's trim() treats a leading
+	// BOM as whitespace and strips it.
+	eleventyConfig.addTransform("humans-txt-bom", (content, outputPath) => {
+		if (outputPath === "./_site/humans.txt") {
+			return "﻿" + content;
+		}
+		return content;
 	});
 
 	// Features to make your build faster (when you need them)

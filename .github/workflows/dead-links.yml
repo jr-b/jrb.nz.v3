@@ -16,6 +16,6 @@ jobs:
       - run: |
           pnpm install
           pnpm build
-      - uses: untitaker/hyperlink@0.2.0
+      - uses: untitaker/hyperlink@0.3.2
         with:
           args: _site/ --check-anchors
